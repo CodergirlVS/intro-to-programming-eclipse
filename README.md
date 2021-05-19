@@ -18,6 +18,7 @@ Grading for this project is less rigid, given the open-ended instructions. Make 
 
 - [Lesson 3.1: How the Web Works](instructions/section-3/lesson-3-1.md)
 
+
 ### **Section 4:** Web Basics
 
 - [Lesson 4.1: HTML Basics](instructions/section-4/lesson-4-1.md)
