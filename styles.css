@@ -3,27 +3,32 @@
 .topBar {
     width: 97%;
     height: 7%;
-    background-color: rgb(30, 156, 206);
-    padding: 5px 10px 40px 30px;
-    text-align: center;
+    background-color: rgb(165, 221, 235);
+    padding: 5px 5px 10px 30px;
     position: fixed;
     font-size: large;
+    list-style-type: none;
+    padding-left: 0;
     
 }
 
 li {
     color: white;
+    display: inline-block;
+    text-align: right;
+    
 }
 
 body {
     text-align: justify;
-    background-color: rgb(230, 238, 163);
+    background-color: rgb(246, 247, 240);
     position: fixed;
 }
 
 .name {
     text-align: left;
     font-size: larger;
+    font-weight: bold;
 }
 
 .main {
