@@ -1,0 +1,32 @@
+/* Styling sheet for index.html */
+
+.topBar {
+    width: 97%;
+    height: 7%;
+    background-color: rgb(30, 156, 206);
+    padding: 5px 10px 40px 30px;
+    text-align: center;
+    position: fixed;
+    font-size: large;
+    
+}
+
+li {
+    color: white;
+}
+
+body {
+    text-align: justify;
+    background-color: rgb(230, 238, 163);
+    position: fixed;
+}
+
+.name {
+    text-align: left;
+    font-size: larger;
+}
+
+.main {
+    padding: 80px 5px 5px 5px;
+    
+}
