@@ -1,37 +1,29 @@
 /* Styling sheet for index.html */
 
-.topBar {
+nav {
     width: 97%;
-    height: 7%;
-    background-color: rgb(165, 221, 235);
-    padding: 5px 5px 10px 30px;
-    position: fixed;
-    font-size: large;
-    list-style-type: none;
-    padding-left: 0;
-    
-}
-
-li {
-    color: white;
-    display: inline-block;
-    text-align: right;
-    
-}
-
-body {
-    text-align: justify;
-    background-color: rgb(246, 247, 240);
+    height: 210px;
+    border-bottom: 2px solid black;
     position: fixed;
 }
-
-.name {
-    text-align: left;
+.navBar {
     font-size: larger;
     font-weight: bold;
+    display: flex;
+    vertical-align: baseline;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-left: 100px;
+    margin-top: 180px;
 }
-
-.main {
-    padding: 80px 5px 5px 5px;
-    
+.navBar a:hover {
+    color:rgb(75, 219, 176)
+}
+body {
+    text-align: justify;
+    background-color: rgb(250, 250, 250);
+    position: initial;
+}
+.about {
+    padding: 20px 5px 5px 5px; 
 }

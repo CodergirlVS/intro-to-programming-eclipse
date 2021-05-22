@@ -55,33 +55,33 @@ Also, some HTML elements are "self-closing", meaning that they have one tag that
 
 For this assignment, you will be working exclusively within the `index.html` file.
 
-- [ ] Open your `index.html` file
-- [ ] Define the document type at the top of the file (e.g. `<!DOCTYPE html>`)
-- [ ] Below that, wrap the existing text in an `<html>` element
+- [x] Open your `index.html` file
+- [x] Define the document type at the top of the file (e.g. `<!DOCTYPE html>`)
+- [x] Below that, wrap the existing text in an `<html>` element
 
 #### **Head Element**
 
 The "head" of an HTML document contains all the page's meta information, such as title and description.
 
-- [ ] In between the opening and closing `<html>` tags, insert a `<head>` element
-- [ ] Inside the `<head>` element, add a `<title>` element for the title of your webpage
-- [ ] Below that, add additional `<meta>` elements ([learn more](https://www.w3schools.com/html/html_head.asp))
+- [x] In between the opening and closing `<html>` tags, insert a `<head>` element
+- [x] Inside the `<head>` element, add a `<title>` element for the title of your webpage
+- [x] Below that, add additional `<meta>` elements ([learn more](https://www.w3schools.com/html/html_head.asp))
 
 #### **Body Element**
 
 The "body" of an HTML document contains all the page's visible content.
 
-- [ ] After the closing `</head>` tag, insert a `<body>` element
-- [ ] In between the opening and closing `<body>` tags, paste all of your text from the previous lesson
+- [x] After the closing `</head>` tag, insert a `<body>` element
+- [x] In between the opening and closing `<body>` tags, paste all of your text from the previous lesson
 
 #### **Semantic Markup**
 
 HTML describes the structure of a webpage using various semantic elements, such as: headings, paragraphs, lists, and more.
 
-- [ ] Separate the "About", "Experience", and "Connect" sections using the `<section>` element
-- [ ] Wrap each heading in a heading element (e.g. `<h1>About</h1>`)
-- [ ] Wrap each paragraph in a paragraph tag (e.g. `<p>Something about me...</p>`)
-- [ ] Wrap each list in an unordered list element ([learn more](https://www.w3schools.com/html/html_lists.asp))
+- [x] Separate the "About", "Experience", and "Connect" sections using the `<section>` element
+- [x] Wrap each heading in a heading element (e.g. `<h1>About</h1>`)
+- [x] Wrap each paragraph in a paragraph tag (e.g. `<p>Something about me...</p>`)
+- [x] Wrap each list in an unordered list element ([learn more](https://www.w3schools.com/html/html_lists.asp))
 
 Feel free to use even more HTML elements by adding images, navigation menus, etc.
 

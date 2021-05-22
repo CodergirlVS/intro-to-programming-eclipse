@@ -51,8 +51,8 @@ Now, open the project directory in your code editor and continue to the next sec
 
 ### Task List:
 
-- [ ] Create a file called `index.html`
-- [ ] Type your name into the file and save
+- [X] Create a file called `index.html`
+- [X] Type your name into the file and save
 
 ### Final Step:
 
