@@ -4,7 +4,6 @@ nav {
     width: 97%;
     height: 210px;
     border-bottom: 2px solid black;
-    position: fixed;
 }
 .navBar {
     font-size: larger;
