@@ -1,19 +1,19 @@
 /* Styling sheet for index.html */
 
 nav {
-    width: 97%;
-    height: 210px;
+    display: flex;
+    align-items: flex-end;
     border-bottom: 2px solid black;
 }
 .navBar {
     font-size: larger;
     font-weight: bold;
+    text-align: right;
     display: flex;
-    vertical-align: baseline;
-    justify-content: space-around;
+    flex: 1;
+    text-align: right;
+    justify-content: space-evenly;
     list-style-type: none;
-    margin-left: 100px;
-    margin-top: 180px;
 }
 .navBar a:hover {
     color:rgb(75, 219, 176)
