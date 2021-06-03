@@ -26,50 +26,34 @@ profileName.addEventListener('mouseout', () => {
     profileName.textContent = profileName.textContent.toLowerCase();
 });
 
-skillsSection.addEventListener('mouseover', (event, event1) => {
+skillsSection.addEventListener('mouseover', (event) => {
     if(event.target.tagName == 'LI') {
         event.target.textContent = event.target.textContent.toUpperCase()
+        event.target.style.color = 'red';
       }
 });
 skillsSection.addEventListener('mouseout', (event) => {
     if(event.target.tagName == 'LI') {
         event.target.textContent = event.target.textContent.toLowerCase();
+        event.target.style.color = 'black';
       }
 });
 
 for(let i = 0; i < techSkills.length; i++) {
     const techSkill = document.createElement('li');
     techSkill.innerText = techSkills[i];
-    techSkill.addEventListener('mouseover', () => {
-        techSkill.style.color = 'red';
-    });
-    techSkill.addEventListener('mouseout', () => {
-        techSkill.style.color = 'black';
-    });
     techSkillsList.appendChild(techSkill);
 };
 
 for(let i = 0; i < busnSkills.length; i++) {
     const busnSkill = document.createElement('li');
     busnSkill.innerHTML = busnSkills[i];
-    busnSkill.addEventListener('mouseover', () => {
-        busnSkill.style.color = 'red';
-    });
-    busnSkill.addEventListener('mouseout', () => {
-        busnSkill.style.color = 'black';
-    });
     busnSkillsList.appendChild(busnSkill);
 };
 
  for(let i = 0; i < personalSkills.length; i++) {
     const personalSkill = document.createElement('li');
     personalSkill.textContent = personalSkills[i];
-    personalSkill.addEventListener('mouseover', () => {
-        personalSkill.style.color = 'red';
-    });
-    personalSkill.addEventListener('mouseout', () => {
-        personalSkill.style.color = 'black';
-    });
     personalSkillsList.appendChild(personalSkill);
  };
 
