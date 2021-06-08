@@ -1,3 +1,5 @@
+//**************************Lesson-4-2****************************************
+
 const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
@@ -147,12 +149,12 @@ function createEditButton() {
     const editButton = document.createElement("button");
     editButton.textContent = "Edit";
     editButton.type = "Edit";
-
+    editButton.removeEventListener("click", saveMessageButtonOnClick);
     editButton.addEventListener("click", editMessageButtonOnClick)
     
     // Save function
-    editButton.addEventListener("click", saveMessageButtonOnClick);
     editButton.removeEventListener("click", editMessageButtonOnClick);
+    editButton.addEventListener("click", saveMessageButtonOnClick);
     
   return editButton;
 }
