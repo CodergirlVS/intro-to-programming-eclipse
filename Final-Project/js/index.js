@@ -82,9 +82,132 @@ for (let i = 0; i < personalSkills.length; i++) {
   personalSkillsList.appendChild(personalSkill);
 }
 
-//****************************Leasson-4-3*************************************************
+//*****************************************************************Leasson-4-3****************************************************
+//                        ************* CODE REMOVES THE EDIT BUTTON AND CREATES A SAVE BUTTON **********************
 
 const messageForm = document.querySelector('[name="leave_message"]');
+const messageSection = document.querySelector("#messages");
+const messageList = messageSection.querySelector("ul");
+verifyingEmptyMesaages();
+
+function verifyingEmptyMesaages() {
+  if (messageList.children.length === 0) {
+    messageSection.style.display = "none";
+  }
+}
+
+const editFunction = function (e) {
+  const li = e.target.parentNode;
+  const name = li.children[0].textContent;
+  const email = li.children[0].href.slice(7);
+  const message = li.children[1].textContent.slice(8);
+
+  const nameInput = document.createElement("input");
+  nameInput.type = "text";
+  nameInput.value = name;
+  const emailInput = document.createElement('input');
+  emailInput.type = 'email'
+  emailInput.value = email
+  const messageInput = document.createElement("input");
+  messageInput.type = "text";
+  messageInput.value = message;
+
+  li.innerHTML = "";
+  li.appendChild(nameInput);
+  li.appendChild(emailInput);
+  li.appendChild(messageInput);
+  li.appendChild(createRemoveButton());
+  li.appendChild(createSaveButton());
+  
+ //createLi(nameInput, emailInput, messageInput);
+
+  e.target.removeEventListener("click", editFunction);
+  e.target.addEventListener('click', saveFunction);
+  e.target.textContent = "Save";
+};
+
+const saveFunction = function (e) {
+  
+  const li = e.target.parentNode;
+
+  const name = li.children[0].value;
+  const email = li.children[1].value;
+  const message = li.children[2].value;
+
+  populateLi(li, name, email, message);
+  // const updatedMessage = createLi(name, email, message);
+  // li.replaceWith(updatedMessage);
+};
+
+
+//Creating Save Button
+function createSaveButton() {
+  const saveButton = document.createElement("button");
+  saveButton.textContent = "Save";
+  saveButton.type = "Save";
+  saveButton.addEventListener("click", saveFunction);
+  return saveButton;
+}
+
+//Creating Edit Button
+function createEditButton() {
+  const editButton = document.createElement("button");
+  editButton.textContent = "Edit";
+  editButton.type = "Edit";
+  editButton.addEventListener("click", editFunction);
+  return editButton;
+}
+
+//Creating Remove Button
+function createRemoveButton() {
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "Remove";
+  removeButton.type = "button";
+  removeButton.addEventListener("click", (event) => {
+    const entry = event.target.parentNode;
+    entry.remove();
+    verifyingEmptyMesaages();
+  });
+  return removeButton;
+}
+
+function formLiText(fullName, email, message) {
+  return  `<a href = "mailto:${email}">${fullName}</a><span> wrote: ${message}</span>`;
+}
+
+// creating Li
+function createLi (fullName, email, message) {
+  const newLi = document.createElement("li");
+  return populateLi(newLi, fullName, email, message);
+}
+
+function populateLi(liNode, fullName, email, message) {
+  liNode.innerHTML = formLiText(fullName, email, message);
+
+  liNode.appendChild(createEditButton());
+  liNode.appendChild(createRemoveButton());
+
+  return liNode;
+}
+
+messageForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  messageSection.style.display = "block";
+  const fullName = e.target.user_name.value;
+  const email = e.target.user_email.value;
+  const message = e.target.user_message.value;
+  console.log(fullName, email, message);
+  
+  const newLi = createLi(fullName, email, message);
+
+  messageList.appendChild(newLi);
+  
+  messageForm.reset();
+});
+
+/**                 ************ CODE TO USE THE SAME BUTTON FOR EDIT AND SAVE ***********
+ * 
+ const messageForm = document.querySelector('[name="leave_message"]');
 const messageSection = document.querySelector("#messages");
 const messageList = messageSection.querySelector("ul");
 verifyingEmptyMesaages();
@@ -184,3 +307,6 @@ messageForm.addEventListener("submit", (e) => {
   newMessage.appendChild(editButton);
   messageForm.reset();
 });
+  
+ */
+//****************************************************************************LESSON-4-4****************************************************************************
