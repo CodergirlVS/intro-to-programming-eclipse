@@ -112,6 +112,7 @@ const editMessageButtonOnClick = function (buttonEditEvent) {
   const li = buttonEditEvent.target.parentNode;
 
   const editedMessageSpan = li.children[2];
+  console.log(editedMessageSpan);
   const editedMessageInput = document.createElement("input");
   editedMessageInput.type = "text";
   editedMessageInput.value = editedMessageSpan.textContent;
@@ -125,37 +126,42 @@ const editMessageButtonOnClick = function (buttonEditEvent) {
   li.insertBefore(editedNameInput, editedNameSpan);
   li.removeChild(editedNameSpan);
   console.log("check");
+  buttonEditEvent.target.removeEventListener("click", editMessageButtonOnClick);
+  buttonEditEvent.target.addEventListener("click", saveMessageButtonOnClick);
   buttonEditEvent.target.textContent = "Save";
 };
 
 const saveMessageButtonOnClick = function (event) {
-    const li = event.target.parentNode;
-    const updatedMessageInput = li.children[2];
-    const updatedMessageSpan = document.createElement("span");
-    console.log(updatedMessageInput);
-    updatedMessageSpan.textContent = updatedMessageInput.value;
-    li.insertBefore(updatedMessageSpan, updatedMessageInput);
-    li.removeChild(updatedMessageInput);
-    const updatedNameInput = li.children[0];
-    const updatedNameSpan = document.createElement("span");
-    updatedNameSpan.textContent = updatedNameInput.value;
-    li.insertBefore(updatedNameSpan, updatedNameInput);
-    li.removeChild(updatedNameInput);
-    event.target.textContent = "Edit";
+  const li = event.target.parentNode;
+
+  const updatedMessageInput = li.children[2];
+  const updatedMessageSpan = document.createElement("span");
+  console.log(updatedMessageInput);
+  updatedMessageSpan.textContent = updatedMessageInput.value;
+  li.insertBefore(updatedMessageSpan, updatedMessageInput);
+  li.removeChild(updatedMessageInput);
+
+  const updatedNameInput = li.children[0];
+  const updatedNameSpan = document.createElement("span");
+  updatedNameSpan.textContent = updatedNameInput.value;
+  li.insertBefore(updatedNameSpan, updatedNameInput);
+  li.removeChild(updatedNameInput);
+  console.log("save");
+  event.target.removeEventListener("click", saveMessageButtonOnClick);
+  event.target.addEventListener("click", editMessageButtonOnClick);
+  event.target.textContent = "Edit";
 };
 
 function createEditButton() {
-    // edit function
-    const editButton = document.createElement("button");
-    editButton.textContent = "Edit";
-    editButton.type = "Edit";
-    editButton.removeEventListener("click", saveMessageButtonOnClick);
-    editButton.addEventListener("click", editMessageButtonOnClick)
-    
-    // Save function
-    editButton.removeEventListener("click", editMessageButtonOnClick);
-    editButton.addEventListener("click", saveMessageButtonOnClick);
-    
+  // edit function
+  const editButton = document.createElement("button");
+  editButton.textContent = "Edit";
+  editButton.type = "Edit";
+
+  editButton.addEventListener("click", editMessageButtonOnClick);
+  console.log("edit is done");
+
+  console.log("save is done");
   return editButton;
 }
 

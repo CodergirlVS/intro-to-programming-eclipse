@@ -116,7 +116,7 @@ Now, open the project directory in your code editor and continue to the next sec
 These tasks are **entirely optional**, but if you'd like a challenge then do your best to complete each item.
 
 - [x] (Optional) Hide the #messages section when the list is empty
-- [ ] (Optional) Create an "edit" button for each message entry that allows the user to input a new/modified message
+- [x] (Optional) Create an "edit" button for each message entry that allows the user to input a new/modified message
 
 
 ### Final Step:
