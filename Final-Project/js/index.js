@@ -80,6 +80,8 @@ for (let i = 0; i < personalSkills.length; i++) {
   personalSkillsList.appendChild(personalSkill);
 }
 
+//****************************Leasson-4-3*************************************************
+
 const messageForm = document.querySelector('[name="leave_message"]');
 const messageSection = document.querySelector("#messages");
 const messageList = messageSection.querySelector("ul");
@@ -103,6 +105,7 @@ function createRemoveButton() {
   });
   return removeButton;
 }
+
 const editMessageButtonOnClick = function (buttonEditEvent) {
   const li = buttonEditEvent.target.parentNode;
 
@@ -123,33 +126,34 @@ const editMessageButtonOnClick = function (buttonEditEvent) {
   buttonEditEvent.target.textContent = "Save";
 };
 
+const saveMessageButtonOnClick = function (event) {
+    const li = event.target.parentNode;
+    const updatedMessageInput = li.children[2];
+    const updatedMessageSpan = document.createElement("span");
+    console.log(updatedMessageInput);
+    updatedMessageSpan.textContent = updatedMessageInput.value;
+    li.insertBefore(updatedMessageSpan, updatedMessageInput);
+    li.removeChild(updatedMessageInput);
+    const updatedNameInput = li.children[0];
+    const updatedNameSpan = document.createElement("span");
+    updatedNameSpan.textContent = updatedNameInput.value;
+    li.insertBefore(updatedNameSpan, updatedNameInput);
+    li.removeChild(updatedNameInput);
+    event.target.textContent = "Edit";
+};
+
 function createEditButton() {
-  // edit function
+    // edit function
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.type = "Edit";
 
-  const editButton = document.createElement("button");
-  editButton.textContent = "Edit";
-  editButton.type = "Edit";
-  editButton.addEventListener("click", (e) => {
-    editMessageButtonOnClick(e);
-    e.target.removeEventListener("click", editMessageButtonOnClick);
-
+    editButton.addEventListener("click", editMessageButtonOnClick)
+    
     // Save function
-    e.target.addEventListener("click", (event) => {
-      const li = event.target.parentNode;
-      const updatedMessageInput = li.children[2];
-      const updatedMessageSpan = document.createElement("span");
-      console.log(updatedMessageInput);
-      updatedMessageSpan.textContent = updatedMessageInput.value;
-      li.insertBefore(updatedMessageSpan, updatedMessageInput);
-      li.removeChild(updatedMessageInput);
-      const updatedNameInput = li.children[0];
-      const updatedNameSpan = document.createElement("span");
-      updatedNameSpan.textContent = updatedNameInput.value;
-      li.insertBefore(updatedNameSpan, updatedNameInput);
-      li.removeChild(updatedNameInput);
-      e.target.textContent = "Edit";
-    });
-  });
+    editButton.addEventListener("click", saveMessageButtonOnClick);
+    editButton.removeEventListener("click", editMessageButtonOnClick);
+    
   return editButton;
 }
 
