@@ -98,19 +98,19 @@ function verifyingEmptyMesaages() {
 
 const editFunction = function (e) {
   const li = e.target.parentNode;
-  const name = li.children[0].textContent;
-  const email = li.children[0].href.slice(7);
-  const message = li.children[1].textContent.slice(8);
+  const name = li.children[0];
+  const email = li.children[0];
+  const message = li.children[1];
 
   const nameInput = document.createElement("input");
   nameInput.type = "text";
-  nameInput.value = name;
+  nameInput.value = name.textContent;
   const emailInput = document.createElement('input');
   emailInput.type = 'email'
-  emailInput.value = email
+  emailInput.value = email.href.slice(7);
   const messageInput = document.createElement("input");
   messageInput.type = "text";
-  messageInput.value = message;
+  messageInput.value = message.textContent.slice(8);
 
   li.innerHTML = "";
   li.appendChild(nameInput);
@@ -119,9 +119,6 @@ const editFunction = function (e) {
   li.appendChild(createRemoveButton());
   li.appendChild(createSaveButton());
   
- //createLi(nameInput, emailInput, messageInput);
-
-  e.target.removeEventListener("click", editFunction);
   e.target.addEventListener('click', saveFunction);
   e.target.textContent = "Save";
 };
@@ -138,8 +135,6 @@ const saveFunction = function (e) {
   // const updatedMessage = createLi(name, email, message);
   // li.replaceWith(updatedMessage);
 };
-
-
 //Creating Save Button
 function createSaveButton() {
   const saveButton = document.createElement("button");
@@ -196,7 +191,7 @@ messageForm.addEventListener("submit", (e) => {
   const fullName = e.target.user_name.value;
   const email = e.target.user_email.value;
   const message = e.target.user_message.value;
-  console.log(fullName, email, message);
+  // console.log(fullName, email, message);
   
   const newLi = createLi(fullName, email, message);
 
