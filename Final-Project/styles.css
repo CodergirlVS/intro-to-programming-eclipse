@@ -48,17 +48,19 @@ header div {
     height: 300px;
     border-radius: 10em;
     border: 3px solid white;
-    transition: all .025s;
+    transition: all .125s;
     position: relative;
 }
+/* rotate(360deg)*/
 .profile-img:hover {
-    transform: scale(1.5) rotate(360deg);
+    transform: scale(1.1);
 }
 
 body {
+    margin: 0px;
     text-align: justify;
-    position: initial;
     color: rgb(10, 9, 9);
+    padding: 20px;
     }
 #about {
     padding: 20px 5px 5px 5px;
