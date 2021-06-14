@@ -88,6 +88,15 @@ function verifyingEmptyMesaages() {
 
 const editFunction = function (e) {
   const li = e.target.parentNode;
+  // const maindiv = document.createElement('div');
+  // maindiv.className = 'messageContainer';
+  // const divDate = document.createElement('div');
+  // divDate.className = "rowFlex";
+  // const divMessage = document.createElement('div');
+  // divMessage.className = "rowFlex";
+  // const divButtons = document.createElement('div');
+  // divButtons.className = "rowFlex";
+
   const name = li.firstElementChild.children[1];
   const email = li.firstElementChild.children[1];
   const message = li.firstElementChild.children[2];
@@ -95,11 +104,14 @@ const editFunction = function (e) {
   const nameInput = document.createElement("input");
   nameInput.type = "text";
   nameInput.value = name.textContent;
+  nameInput.className = 'userInput';
   const emailInput = document.createElement('input');
   emailInput.type = 'email'
   emailInput.value = email.href.slice(7);
+  emailInput.className = 'userInput';
   const messageInput = document.createElement("textarea");
   messageInput.type = "text";
+  messageInput.id = 'userMessageInput';
   messageInput.value = message.textContent.slice(8);
   const messageDate = new Date();
   const span = document.createElement('span');
@@ -110,6 +122,15 @@ const editFunction = function (e) {
   while (li.children.length > 0){
     li.removeChild(li.firstElementChild);
   }
+
+  // divDate.appendChild(span);
+  // divDate.appendChild(nameInput);
+  // divDate.appendChild(emailInput);
+  // divMessage.appendChild(messageInput);
+  // divButtons.appendChild(createSaveButton())
+  // divButtons.appendChild(createRemoveButton());
+  // li.appendChild(maindiv);
+
   const div = document.createElement('div');
   div.appendChild(span);
   div.appendChild(nameInput);
@@ -121,7 +142,7 @@ const editFunction = function (e) {
   li.appendChild(createRemoveButton());
   
   e.target.addEventListener('click', saveFunction);
-  //e.target.textContent = "Save";
+  // //e.target.textContent = "Save";
 };
 
 const saveFunction = function (e) {
