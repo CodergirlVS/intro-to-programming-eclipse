@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="web-developer" content="Vaidehi Sapre portfolio">
     <title>Vaidehi's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
 </head>
@@ -103,17 +103,17 @@
                     <li><a href = 'mailto:vaidehis1214@gmail.com? subject = Hi%20There!%20FirstMail.' alt = 'gmail Account'>Email</a></li>
                 </ul>
             </section>
-            <section>
+            <section id = 'form'>
                 <h2>Leave a Message</h2>
                 <form action = 'index.html' method = 'post' name = "leave_message">
                     <label>Full Name:</label><br>
-                    <input type = "text" name = "user_name" required = 'true'><br>
-                    <label>Email:</label><br>
-                    <input type = "email" name = "user_email" required = 'true'><br>
+                    <input type = "text" class = 'userName' name = "user_name" required = 'true' placeholder = 'Adam Smith'>
+                    <label>Email:</label>
+                    <input type = "email" class = 'userName' name = "user_email" required = 'true' placeholder = 'abc@xyz.com'><br>
                     <label>Message:</label><br>
-                    <textarea name = "user_message" required = 'true'></textarea><br>
+                    <textarea id = 'userMessage' name = "user_message" required = 'true'></textarea><br>
                     <br>
-                    <button type = "submit">Submit</button>
+                    <button type = "submit" class = 'buttons'>Submit</button>
                 </form>
             </section>
             <section id = 'messages'>
@@ -123,7 +123,7 @@
             </section>
             <section>
                 <h2>Come Back!!</h2>
-                <h3>Check this</h3>
+                <h2>Check this video.</h2>
                 <video controls width = 500, height 500 
                 src = "http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4"
                 type = "video/mp4">

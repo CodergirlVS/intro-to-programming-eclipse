@@ -9,16 +9,6 @@ footer.appendChild(copyright);
 
 const profileName = document.getElementById("profileName");
 
-profileName.addEventListener("mouseover", () => {
-  profileName.textContent = profileName.innerText.toUpperCase();
-  profileName.style.color = "tomato";
-});
-
-profileName.addEventListener("mouseout", () => {
-  profileName.textContent = profileName.textContent.toLowerCase();
-  profileName.style.color = "seashell";
-});
-
 const skillsSection = document.getElementById("skills");
 
 skillsSection.addEventListener("mouseover", (event) => {
@@ -98,9 +88,9 @@ function verifyingEmptyMesaages() {
 
 const editFunction = function (e) {
   const li = e.target.parentNode;
-  const name = li.children[0];
-  const email = li.children[0];
-  const message = li.children[1];
+  const name = li.firstElementChild.nth-child[1];
+  const email = li.firstElementChild.nth-child[1];
+  const message = li.firstElementChild.nth-child[2];
 
   const nameInput = document.createElement("input");
   nameInput.type = "text";
@@ -112,24 +102,30 @@ const editFunction = function (e) {
   messageInput.type = "text";
   messageInput.value = message.textContent.slice(8);
 
-  li.innerHTML = "";
+  // li.innerHTML = "";
+  //for(let i = 0; i < li.children.length; i++) {
+  while (li.children.length > 0){
+    li.removeChild(li.firstElementChild);
+  }
+  // const div = document.createElement('div');
+  // li.style.marginRight = '2px';
   li.appendChild(nameInput);
   li.appendChild(emailInput);
   li.appendChild(messageInput);
-  li.appendChild(createRemoveButton());
+  //li.appendChild(div);
   li.appendChild(createSaveButton());
+  li.appendChild(createRemoveButton());
   
   e.target.addEventListener('click', saveFunction);
-  e.target.textContent = "Save";
+  //e.target.textContent = "Save";
 };
 
 const saveFunction = function (e) {
-  
   const li = e.target.parentNode;
 
-  const name = li.children[0].value;
-  const email = li.children[1].value;
-  const message = li.children[2].value;
+  const name = li.nth-child[1].value;
+  const email = li.nth-child[2].value;
+  const message = li.nth-child[3].value;
 
   populateLi(li, name, email, message);
   // const updatedMessage = createLi(name, email, message);
@@ -140,6 +136,7 @@ function createSaveButton() {
   const saveButton = document.createElement("button");
   saveButton.textContent = "Save";
   saveButton.type = "Save";
+  saveButton.className = 'buttons';
   saveButton.addEventListener("click", saveFunction);
   return saveButton;
 }
@@ -149,6 +146,7 @@ function createEditButton() {
   const editButton = document.createElement("button");
   editButton.textContent = "Edit";
   editButton.type = "Edit";
+  editButton.className = "buttons";
   editButton.addEventListener("click", editFunction);
   return editButton;
 }
@@ -158,6 +156,7 @@ function createRemoveButton() {
   const removeButton = document.createElement("button");
   removeButton.textContent = "Remove";
   removeButton.type = "button";
+  removeButton.style.backgroundColor = 'red'
   removeButton.addEventListener("click", (event) => {
     const entry = event.target.parentNode;
     entry.remove();
@@ -167,17 +166,31 @@ function createRemoveButton() {
 }
 
 function formLiText(fullName, email, message) {
-  return  `<a href = "mailto:${email}">${fullName}</a><span> wrote: ${message}</span>`;
+  const messageDate = new Date();
+  const div = document.createElement('div');
+  div.style.marginRight = '2px';
+  //div.innerHTML  = `<a href = "mailto:${email}">${fullName}</a><span> wrote: ${message}</span><br>
+  //          ${messageDate.toLocaleString()}`;
+  const span1 = document.createElement('span');
+  span1.innerText = `${messageDate.toLocaleString()} `;
+  const a = document.createElement('a');
+    a.href = `mailto:${email}`;
+    a.innerText = fullName;
+  const span = document.createElement('span');
+    span.innerText = ` wrote: ${message}`;
+  div.append(span1, a, span)
+    return div;
 }
 
 // creating Li
 function createLi (fullName, email, message) {
   const newLi = document.createElement("li");
+  newLi.classList.add('newMessageList');
   return populateLi(newLi, fullName, email, message);
 }
 
 function populateLi(liNode, fullName, email, message) {
-  liNode.innerHTML = formLiText(fullName, email, message);
+  liNode.appendChild(formLiText(fullName, email, message));
 
   liNode.appendChild(createEditButton());
   liNode.appendChild(createRemoveButton());
