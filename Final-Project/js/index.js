@@ -88,9 +88,9 @@ function verifyingEmptyMesaages() {
 
 const editFunction = function (e) {
   const li = e.target.parentNode;
-  const name = li.firstElementChild.nth-child[1];
-  const email = li.firstElementChild.nth-child[1];
-  const message = li.firstElementChild.nth-child[2];
+  const name = li.firstElementChild.children[1];
+  const email = li.firstElementChild.children[1];
+  const message = li.firstElementChild.children[2];
 
   const nameInput = document.createElement("input");
   nameInput.type = "text";
@@ -98,21 +98,25 @@ const editFunction = function (e) {
   const emailInput = document.createElement('input');
   emailInput.type = 'email'
   emailInput.value = email.href.slice(7);
-  const messageInput = document.createElement("input");
+  const messageInput = document.createElement("textarea");
   messageInput.type = "text";
   messageInput.value = message.textContent.slice(8);
+  const messageDate = new Date();
+  const span = document.createElement('span');
+  span.innerText = `${messageDate.toLocaleString()} `;
 
   // li.innerHTML = "";
   //for(let i = 0; i < li.children.length; i++) {
   while (li.children.length > 0){
     li.removeChild(li.firstElementChild);
   }
-  // const div = document.createElement('div');
-  // li.style.marginRight = '2px';
-  li.appendChild(nameInput);
-  li.appendChild(emailInput);
-  li.appendChild(messageInput);
-  //li.appendChild(div);
+  const div = document.createElement('div');
+  div.appendChild(span);
+  div.appendChild(nameInput);
+  div.appendChild(emailInput);
+  div.appendChild(messageInput);
+
+  li.appendChild(div);
   li.appendChild(createSaveButton());
   li.appendChild(createRemoveButton());
   
@@ -123,10 +127,14 @@ const editFunction = function (e) {
 const saveFunction = function (e) {
   const li = e.target.parentNode;
 
-  const name = li.nth-child[1].value;
-  const email = li.nth-child[2].value;
-  const message = li.nth-child[3].value;
+  const name = li.firstElementChild.children[1].value;
+  const email = li.firstElementChild.children[2].value;
+  const message = li.firstElementChild.children[3].value;
 
+  while (li.children.length > 0){
+    li.removeChild(li.firstElementChild);
+  }
+  
   populateLi(li, name, email, message);
   // const updatedMessage = createLi(name, email, message);
   // li.replaceWith(updatedMessage);
