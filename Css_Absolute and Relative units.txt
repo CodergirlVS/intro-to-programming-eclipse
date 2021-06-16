@@ -1,0 +1,17 @@
+Absolute units:
+px - Pixel
+  pt - Point
+  pc - Picas
+  in - Inch
+  cm - Centimeter
+  mm - Millimeter
+Relative units:
+em - Relative to the font-size of the element
+  ex - Relative to the x-height of the current font
+  % - Relative to the parent element
+  ch - Relative to the width of zero
+  rem - Relative to the root element
+  vw - The viewport width is relative to 1% of the width viewport (browser window)
+  vh - The viewport height is relative to 1% of the height viewport (browser window)
+  vmin - The viewport minimum is relative to 1% of the viewport (browser window) for smaller dimension
+  vmax - The viewport maximum is relative to 1% of the viewport (browser window) for larger dimension

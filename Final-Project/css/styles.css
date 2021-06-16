@@ -1,0 +1,336 @@
+/* Styling sheet for index.html */
+
+body{
+    font-size: 16px;
+    font-family :Arial, Helvetica, sans-serif;
+    background-color: lightgray
+}
+
+header {
+    background-color: rgb(231, 231, 231);
+}
+
+.navBar {
+    margin-top: 0px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: black;
+    padding: 0.3rem;
+}
+
+.navBar a {
+    color: seashell;
+}
+
+.navBar a:hover {
+    color: lightgray;
+}
+
+#profileName {
+    color : seashell
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('./images/code-background.jpg/');
+}
+
+#profileName {
+    color: seashell;
+    text-decoration: underline;
+}
+
+#profileName:hover {
+    color: tomato;
+}
+.profile-img {
+    margin: auto;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 10em;
+    border: 3px solid black;
+    transition: all .125s;
+    position: relative;
+    display: inline-block;
+}
+/* rotate(360deg)*/
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+main {
+    padding: 0.5rem;
+    }
+
+h2 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 0.75rem;
+    text-align: justify;
+}
+    
+#experience {
+    background-color: rgb(231, 231, 231);
+    padding: 0.3rem;
+}
+
+h3 {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    width: 80%;
+    border: 0.15rem solid grey;
+    color: gray
+}
+
+h4 {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+#technicalSkills,
+#businessSkills,
+#personalSkills {
+    list-style-type: none;
+    font-size: 0.9rem;
+}
+
+#form,
+#messages {
+    background-color: rgb(231, 231, 231);
+    padding: 0.3rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#connectList {
+    display: block;
+    list-style-type: none;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 0.4rem;
+    
+}
+/*  */
+
+.link {
+    font-size: 1.2rem;
+    color: royalblue;
+    display: inline-block;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    border-radius: 1rem;
+}
+
+#form{
+    padding: 0.5rem;
+}
+
+.userInputLabel {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+.userInput {
+    width: 70%;
+    height: 2rem;
+    font-size: 1.15rem;
+}
+.userInput:focus  {
+    background-color: lightgray;
+}
+
+#userMessageLabel {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+#userMessageInput:focus {
+    background-color: lightgray;
+}
+#userMessageInput {
+    width: 70%;
+    height: 3.2rem;
+    font-size: 1.15rem;
+}
+
+/* If we are using the flex box to style the message list
+
+ .messageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.rowFlex{
+    display: flex;
+    flex-direction: row;
+} */
+
+button {
+    cursor: pointer;
+    font-size: .78em;
+    margin-top: 5px;
+    margin-right: .7em;
+    border-radius: .5em;
+    padding: .4em .6em;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: lightgray;
+}
+.buttons {
+    background-color: gray;
+    align-self: center;
+}
+
+.newMessageList {
+    border-bottom: 3px solid black;
+    padding: 0.5rem;
+}
+
+.newMessageList a {
+    font-weight: bold;
+}
+
+#endDiv {
+    padding: 1rem;
+}
+
+video{
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    text-align: center;
+    color: slategray;
+    background-color: rgb(247, 247, 247);
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 40px;
+    }
+    .navBar {
+        padding: 1.3rem;
+        font-size: 1.5rem;
+    }
+
+    .profile-img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    main {
+        padding: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    #experience {
+        padding: 0.7rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    #technicalSkills, 
+    #businessSkills, 
+    #personalSkills {
+        font-size: 1.2rem;
+    }
+
+    #connect, 
+    #messages
+    #form {
+        margin-left: 1.4rem;
+        margin-right: 1.4rem;
+        padding: 1.3rem;
+    }
+
+    #connectList {
+        margin: 0px;
+    }
+
+    .link {
+        font-size: 1.6rem;
+    }
+
+    form {
+        margin-top: 0px;
+    }
+
+    .inlineInput {
+        display: inline-block;
+        width: 45%;
+        margin-right: 10px;
+    }
+
+    .inlineInput .userInput {
+        width: 100%;
+    }
+
+    .userInputLabel {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    #userMessageLabel {
+        font-size: 1.5rem;
+        margin-top: 1 rem;
+    }
+
+    .userInput {
+        font-size: 1.5rem;
+        height: 3rem;
+    }
+
+    #userMessageInput {
+        height: 5rem;
+        width: 95%;
+
+    }
+    .buttons {
+        width: 15%;
+    }
+
+    .newMessageList {
+        font-size: 1.2rem;
+    }
+    video {
+        width: 500px;
+    }
+
+/* @media (min-width: 1025px) {
+}
+ */
