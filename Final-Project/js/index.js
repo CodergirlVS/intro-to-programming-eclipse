@@ -105,14 +105,17 @@ const editFunction = function (e) {
   nameInput.type = "text";
   nameInput.value = name.textContent;
   nameInput.className = 'userInput';
+
   const emailInput = document.createElement('input');
   emailInput.type = 'email'
   emailInput.value = email.href.slice(7);
   emailInput.className = 'userInput';
+
   const messageInput = document.createElement("textarea");
   messageInput.type = "text";
   messageInput.id = 'userMessageInput';
   messageInput.value = message.textContent.slice(8);
+  
   const messageDate = new Date();
   const span = document.createElement('span');
   span.innerText = `${messageDate.toLocaleString()} `;
