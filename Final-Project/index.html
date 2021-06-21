@@ -12,22 +12,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
 </head>
 <body>
-    <div id = 'background-transition'>
-        <header>
-            <nav>
-                <ul class = 'navBar'>
-                <li id = 'profileName'>Vaidehi Sapre</li>
-                <li ><a href = 'index.html'>About</a></li>
-                <li><a href ='#experience'>Experience</a></li>
-                <li><a href ='#connect'>Connect</a></li>
-                </ul>
-            </nav>
-            <div>
-                <img src = 'https://placeimg.com/200/200/people/grayscale' 
-                alt = 'My Profile Picture' title = "Vaidehi Sapre" class = "profile-img">
-                <h1>Hello!</h1>
-            </div>  
-        </header>
+    <nav id = 'nav'>
+        <ul class = 'navBar'>
+        <li id = 'profileName'>Vaidehi Sapre</li>
+        <li ><a href = 'index.html'>About</a></li>
+        <li><a href ='#experience'>Experience</a></li>
+        <li><a href ='#connect'>Connect</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div>
+            <img src = 'https://placeimg.com/200/200/people/grayscale' 
+            alt = 'My Profile Picture' title = "Vaidehi Sapre" class = "profile-img">
+            <h1>Hello!</h1>
+        </div>  
+    </header>
         
         <main>
             <section id = 'about'>
@@ -94,17 +93,15 @@
                 <h3>Personal Skills:</h3>
                     <ul id = 'personalSkills'></ul>
             </section>
-        </main>
+        
             <section id = 'connect'>
                 <h2>Connect with me here!</h2>
-                <ul id = 'connectList'>
-                    <li><a class = 'link' href = 'https://github.com/CodergirlVS' alt = "GitHub Account CodergirlVS">GitHub</a></li>
-                    <li><a class = 'link' href = 'https://www.linkedin.com/in/vaidehi-s-88b32349/' alt = 'Linkedin Account link'>Linkedin</a></li>
-                    <li><a class = 'link' href = 'mailto:vaidehis1214@gmail.com? subject = Hi%20There!%20FirstMail.' alt = 'gmail Account'>Email</a></li>
+                <ul>
+                    <li class = 'connectList'><a class = 'link' href = 'https://github.com/CodergirlVS' alt = "GitHub Account CodergirlVS">GitHub</a></li>
+                    <li class = 'connectList'><a class = 'link' href = 'https://www.linkedin.com/in/vaidehi-s-88b32349/' alt = 'Linkedin Account link'>Linkedin</a></li>
+                    <li class = 'connectList'><a class = 'link' href = 'mailto:vaidehis1214@gmail.com? subject = Hi%20There!%20FirstMail.' alt = 'gmail Account'>Email</a></li>
                 </ul>
             </section>
-        
-
             <section id = 'form'>
                 <h2>Leave a Message</h2>
                 <form action = 'index.html' method = 'post' name = "leave_message">
@@ -129,14 +126,13 @@
                     <ul>
                     </ul>
             </section>
-
+        </main>
             <div id = 'endDiv'>
                 <h2>Come Back Again!!</h2>
                 <video controls width = 300, height = 300
                 src = "video/Enjoy your Summers.mp4"
                 type = "video/mp4">
                 </video>
-            </div>
         <footer> 
             <!-- <small>&copy; 2021 Vaidehi's Portfolio</small>    -->
         </footer>
