@@ -188,6 +188,7 @@ function createRemoveButton() {
   const removeButton = document.createElement("button");
   removeButton.textContent = "Remove";
   removeButton.type = "button";
+  removeButton.className = "buttons"
   removeButton.style.backgroundColor = 'red'
   removeButton.addEventListener("click", (event) => {
     const entry = event.target.parentNode;
@@ -200,7 +201,6 @@ function createRemoveButton() {
 function formLiText(fullName, email, message) {
   const messageDate = new Date();
   const div = document.createElement('div');
-  div.style.marginRight = '2px';
   //div.innerHTML  = `<a href = "mailto:${email}">${fullName}</a><span> wrote: ${message}</span><br>
   //          ${messageDate.toLocaleString()}`;
   const span1 = document.createElement('span');
