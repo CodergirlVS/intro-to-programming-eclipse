@@ -56,11 +56,13 @@ body{
 
 header {
     text-align: center;
-    background: url('./images/code-background.jpg');
+    background: url('../images/code-background.jpg') no-repeat top center;
     background-size: cover;
     overflow: hidden;
     padding-top: 60px;
     line-height: 1.5;
+    width: inherit;
+    height: 600px;
 }
 
 .profile-img {
@@ -70,6 +72,7 @@ header {
     border-radius: 50%;
     border: 3px solid black;
     transition: all .125s;
+    position: center;
 }
 /* rotate(360deg)*/
 .profile-img:hover {
@@ -79,6 +82,7 @@ header {
 h1 {
     text-align: center;
     font-size: 40px;
+    color: seashell;
 }
 
 h2 {
@@ -93,17 +97,15 @@ p {
 #about,
 #experience,
 #skills,
-#connect,
-#form,
 #messages,
-#endDiv
+#endDiv,
+#connect
  {
        padding: 23px;
 }
     
 #experience,
 #connect,
-#form,
 #messages {
     background-color: rgb(231, 231, 231);
 }
@@ -125,8 +127,13 @@ h3 {
 h4 {
     color: grey;
     font-size: 12px;
-    border-bottom: 2px solid grey;
-    margin-top: 0;
+    margin-top: 0; 
+}
+
+.drop {
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: baseline;
 }
 
 #technicalSkills,
@@ -137,17 +144,17 @@ h4 {
 }
 
 #connect ul {
-    padding: 20px;
+    padding: 4px;
 }
 
 .connectList {
     display: inline-block;
     list-style-type: none;
     border-radius: 6px;
-    margin: 2px;
     font-size: 20px;
     padding: 5px 10px;
     background-color: GRAY;
+    margin-left: 12px;
 }
 
 .connectList:nth-child(even) {
@@ -168,16 +175,26 @@ h4 {
     color: white;
 }
 
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inlineInput {
+    display: flex;
+    flex-direction: column;
+}
+
 .userInputLabel {
     text-align: left;
     font-weight: bold;
     font-size: 18px;
     margin-top: 11px;
-    display: block;
+    /*display: block; */
 }
 
 .userInput {
-    width: 80%;
+    width: 80%; 
     height: 30px;
     font-size: 17px;
 }
@@ -218,7 +235,7 @@ button {
     cursor: pointer;
     margin-top: 5px;
     margin-left: 10px;
-    margin-bottom: 3px;
+    margin-bottom: 15px;
     border-radius: 12px;
     padding: 5px;
     font-weight: bold;
@@ -261,20 +278,24 @@ footer {
 
 @media (min-width: 768px) {
 
+    html {
+        font-size: 45px;
+    }
     .navBar li {
         padding: 15px;
+        font-size: 20px;
     }
 
     /* .navBar {
         padding: 1.3rem;
         font-size: 1.5rem;
     } */
-
+    
     .profile-img {
         width: 300px;
         height: 300px;
     }
-    
+
     p {
         font-size: 15px;
     }
@@ -291,7 +312,6 @@ footer {
     #experience,
     #skills,
     #connect,
-    #form,
     #messages,
     #endDiv {
         padding: 20px 56px 3px 56px;
@@ -303,25 +323,39 @@ footer {
         font-size: 16px;
     }
 
+    #connect ul {
+        padding: 0px;
+    }
+
     .link {
         font-size: 23px;
     }
 
-    .inlineInput {
+    /* .inlineInput {
         display: inline-block;
-        width: 46%;
+        width: 47%;
         margin-right: 3%;
+    } */
+
+    .inlineInput{
+        display: inline-flex;
+        width: 47%;
+        flex-direction: column;
     }
 
-    .inlineInput .userInput {
+    /* .inlineInput .userInput {
         width: 100%;
+    } */
+
+    .userInputLabel {
+        margin-top: 0;
     }
 
     #userMessageInput {
         height: 76px;
-        width: 95%;
-
+        width: 80%;
     }
+
     .buttons {
         width: 15%;
         

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <nav id = 'nav'>
@@ -49,47 +51,53 @@
                     <p> I have worked in lots of different jobs and here is the list 
                     of my past experiences:</p>
                 <ul>
-                    <li>
-                        <h3> WNS Global Services, Mumbai-India,  Sr. Analyst</h3>
-                        <h4>September 2008 - September 2010</h4>
-                        <p>
+                    <!-- <li> -->   
+                        <!-- <div class = 'collapse'> -->
+                    <li><h3> WNS Global Services, Mumbai-India,  Sr. Analyst</h3></li>
+                    <li class = 'drop'><h4>September 2008 - September 2010</h4><i class="fas fa-sort-down"></i></i></li>
+                    <ul>
+                                    
+                    <!-- </div> -->
+                            <li><p class = 'content'>
                             Migrated Revenue Recognition and Allocation Process of USA 
                             based Insurance giant. Involved in end-to-end process migration and setup. 
                             Managed team of 8 members. Awarded for conceptualizing and implementing 
                             process improvement changes.
-                        </p>
-                    </li>
-                    <li>
-                        <h3> JPMorgan Chase  Co., Mumbai-India, Team Member</h3>
-                        <h4>February 2006 - March 2008</h4> 
-                        <p>
-                        Involved in the BankOne and JP Morgan Chase Merger project for 
-                        Accounts payable Department. Managed different areas within the 
-                        Accounts Payable Team like payment processing and daily Audit. 
-                        As SME was point of contact for vendor customer service and external 
-                        and Internal Audit teams. Awarded for maintaining highest quality and 
-                        detail oriented performance. Managed workload distribution within the team.
-                        </p>
-                    </li>
-                    <li>
-                        <h3> Arafat Heatreaters Fabricators Pvt. Ltd, Mumbai-India,  Operations Executive</h3>
-                        <h4>August 2005 - November 2005</h4>
-                        <p>
-                        Managed day to day operations of the company and improved 
-                        process efficiency by organizing and prioritizing existing 
-                        resources towards set targets. Worked on customer acquisition strategies. 
-                        Coordinated with our Global agents and clients.
-                        </p>
-                    </li>
-                    <li>
-                        <h3> Ramada International, Mumbai-India,  Financial Administrator</h3> 
-                        <h4> August 2004 - August 2005</h4>
-                        <p> 
-                        Worked on improving bank relations for import export transactions and 
-                        improved accuracy of Financial Report by performing Audit. Reported 
-                        and analyzed Financial Statements and performed Bank Reconciliation. 
-                        </p>
-                    </li>
+                            </p></li>
+                        </ul>
+                        
+                    <li><h3> JPMorgan Chase  Co., Mumbai-India, Team Member</h3></li>
+                    <li class = 'drop'><a href ='#'><h4>February 2006 - March 2008</h4></a></li>
+                        <ul>
+                            <li><p class = 'content'>
+                            Involved in the BankOne and JP Morgan Chase Merger project for 
+                            Accounts payable Department. Managed different areas within the 
+                            Accounts Payable Team like payment processing and daily Audit. 
+                            As SME was point of contact for vendor customer service and external 
+                            and Internal Audit teams. Awarded for maintaining highest quality and 
+                            detail oriented performance. Managed workload distribution within the team.
+                            </p></li>
+                        </ul>
+                    <li><h3> Arafat Heatreaters Fabricators Pvt. Ltd, Mumbai-India, Operations Executive</h3></li>
+                    <li class = 'drop'><a href ='#'><h4>August 2005 - November 2005</h4></a></li>
+                        <ul>
+                            <li><p>
+                            Managed day to day operations of the company and improved 
+                            process efficiency by organizing and prioritizing existing 
+                            resources towards set targets. Worked on customer acquisition strategies. 
+                            Coordinated with our Global agents and clients.
+                            </p></li>
+                        </ul>
+                    <li><h3> Ramada International, Mumbai-India, Financial Administrator</h3></li>
+                    <li class = 'drop'><a href ='#'><h4> August 2004 - August 2005</h4></a></li>
+                        <ul>
+                            <li><p> 
+                            Worked on improving bank relations for import export transactions and 
+                            improved accuracy of Financial Report by performing Audit. Reported 
+                            and analyzed Financial Statements and performed Bank Reconciliation. 
+                            </p></li>
+                        </ul>
+    
                 </ul>
             </section>
             
@@ -102,7 +110,7 @@
                 <h3>Personal Skills:</h3>
                     <ul id = 'personalSkills'></ul>
             </section>
-        
+
             <section id = 'connect'>
                 <h2>Connect with me here!</h2>
                 <ul>
@@ -110,7 +118,6 @@
                     <li class = 'connectList'><a class = 'link' href = 'https://www.linkedin.com/in/vaidehi-s-88b32349/' alt = 'Linkedin Account link'>Linkedin</a></li>
                     <li class = 'connectList'><a class = 'link' href = 'mailto:vaidehis1214@gmail.com? subject = Hi%20There!%20FirstMail.' alt = 'gmail Account'>Email</a></li>
                 </ul>
-            </section>
             <section id = 'form'>
                 <h2>Leave a Message</h2>
                 <form action = 'index.html' method = 'post' name = "leave_message">
@@ -129,6 +136,7 @@
                     <button type = "submit" class = 'buttons'>Submit</button>
                 </form>
             </section>
+            </section>
             
             <section id = 'messages'>
                 <h2>Messages:</h2>
@@ -142,11 +150,11 @@
                 src = "video/Enjoy your Summers.mp4"
                 type = "video/mp4">
                 </video>
+            </div>
         <footer> 
             <!-- <small>&copy; 2021 Vaidehi's Portfolio</small>    -->
         </footer>
         <script src = 'js/index.js'>
-        </script>
-    </div>    
+        </script>   
 </body>
 </html>
