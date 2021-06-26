@@ -8,10 +8,11 @@ body{
 }
 
 #nav {
-    width: 100%;
+    width: 100vw;
     background: black;
     text-align: center;
     position: fixed;
+    top: 0;
     min-height: 20px;
     padding: 3px;
     box-sizing: border-box;
@@ -20,7 +21,7 @@ body{
 
 .navBar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style-type: none;
     font-weight: 600;
     margin: 0 auto;
@@ -30,13 +31,12 @@ body{
 }
 
 .navBar li {
-    padding: 5px 10px 10px 10px;
+    padding: 5px 5px 10px 1px;
     
 }
 
 #profileName { 
     display: block;
-    margin-right: auto;
     color : seashell
 }
 
@@ -56,20 +56,22 @@ body{
 
 header {
     text-align: center;
-    background: url('./images/code-background.jpg');
+    background: url('../images/code-background.jpg') no-repeat top center;
     background-size: cover;
     overflow: hidden;
     padding-top: 60px;
     line-height: 1.5;
+    width: 100vw;
+    height: 100vh;
 }
 
 .profile-img {
-    margin-top: 70px;
-    width: 200px;
-    height: 200px;
+    height: 250px;
     border-radius: 50%;
     border: 3px solid black;
     transition: all .125s;
+    position: relative;
+    top: 114px;
 }
 /* rotate(360deg)*/
 .profile-img:hover {
@@ -79,6 +81,14 @@ header {
 h1 {
     text-align: center;
     font-size: 40px;
+    color: seashell;
+    background-color: black;
+    padding: 10px;
+    display: table;
+    margin-left: 114px;
+    border-radius: 5px;
+    position: relative;
+    top: 100px;
 }
 
 h2 {
@@ -88,22 +98,20 @@ h2 {
 p {
     font-size: 15px;
     text-align: match-parent;
+    line-height: 26px;
 }
 
 #about,
 #experience,
 #skills,
-#connect,
-#form,
 #messages,
-#endDiv
- {
+#endDiv,
+#connect {
        padding: 23px;
 }
     
 #experience,
 #connect,
-#form,
 #messages {
     background-color: rgb(231, 231, 231);
 }
@@ -122,11 +130,50 @@ h3 {
     margin-bottom: 0;      
 }
 
-h4 {
+h4{
     color: grey;
     font-size: 12px;
-    border-bottom: 2px solid grey;
-    margin-top: 0;
+    margin: 0; 
+}
+
+div.drop i {
+    font-size: 24px;
+    margin-left: 8px;  
+}
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .drop {
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+    text-decoration: none;
+    border-bottom: 2px solid gray;
+} */
+
+.drop {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-decoration: none;
+    border-bottom: 2px solid gray;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    /* display: block; */
+    flex: 0 1 100%;
+}
+
+i:hover + .content {
+    max-height: 300px;
+    transition: max-height 2s ease-in 0.2s;
+    cursor: pointer;
 }
 
 #technicalSkills,
@@ -137,17 +184,17 @@ h4 {
 }
 
 #connect ul {
-    padding: 20px;
+    padding: 4px;
 }
 
 .connectList {
     display: inline-block;
     list-style-type: none;
     border-radius: 6px;
-    margin: 2px;
     font-size: 20px;
     padding: 5px 10px;
     background-color: GRAY;
+    margin-left: 12px;
 }
 
 .connectList:nth-child(even) {
@@ -168,19 +215,30 @@ h4 {
     color: white;
 }
 
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inlineInput {
+    display: flex;
+    flex-direction: column;
+}
+
 .userInputLabel {
     text-align: left;
     font-weight: bold;
     font-size: 18px;
     margin-top: 11px;
-    display: block;
+    /*display: block; */
 }
 
 .userInput {
-    width: 80%;
+    width: 80%; 
     height: 30px;
     font-size: 17px;
 }
+
 .userInput:focus  {
     background-color: lightgray;
 }
@@ -196,6 +254,7 @@ h4 {
 #userMessageInput:focus {
     background-color: lightgray;
 }
+
 #userMessageInput {
     width: 80%;
     height: 50px;
@@ -218,7 +277,7 @@ button {
     cursor: pointer;
     margin-top: 5px;
     margin-left: 10px;
-    margin-bottom: 3px;
+    margin-bottom: 15px;
     border-radius: 12px;
     padding: 5px;
     font-weight: bold;
@@ -227,6 +286,7 @@ button {
     width: 80px;
     align-self: center;
 }
+
 .buttons {
     background-color: GRAY;
 }
@@ -248,7 +308,7 @@ button {
 }
 
 video{
-    height: 100%;
+    width: 85vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -261,20 +321,28 @@ footer {
 
 @media (min-width: 768px) {
 
+    html {
+        font-size: 45px;
+    }
+
+    #nav {
+        padding: 25px;
+    }
     .navBar li {
         padding: 15px;
+        font-size: 20px;
     }
 
     /* .navBar {
         padding: 1.3rem;
         font-size: 1.5rem;
     } */
-
+    
     .profile-img {
         width: 300px;
         height: 300px;
     }
-    
+
     p {
         font-size: 15px;
     }
@@ -291,10 +359,9 @@ footer {
     #experience,
     #skills,
     #connect,
-    #form,
     #messages,
     #endDiv {
-        padding: 20px 56px 3px 56px;
+        padding: 20px 56px 10px 56px;
     }
 
     #technicalSkills, 
@@ -303,38 +370,47 @@ footer {
         font-size: 16px;
     }
 
+    #connect ul {
+        padding: 0px;
+    }
+
     .link {
         font-size: 23px;
     }
 
-    .inlineInput {
+    /* .inlineInput {
         display: inline-block;
-        width: 46%;
+        width: 47%;
         margin-right: 3%;
+    } */
+
+    #form{
+        box-sizing: border-box;
     }
 
-    .inlineInput .userInput {
+    .inlineInput{
+        display: inline-flex;
+        width: 47%;
+        flex-direction: column;
+    }
+
+    /* .inlineInput .userInput {
         width: 100%;
+    } */
+
+    .userInputLabel {
+        margin-top: 0;
     }
 
     #userMessageInput {
         height: 76px;
-        width: 95%;
-
+        width: 87%;
     }
+
     .buttons {
         width: 15%;
-        
     }
 
     .newMessageList {
         font-size: 21px;
     }
-
-    video {
-        width: 500px;
-    }
-
-/* @media (min-width: 1025px) {
-}
- */

@@ -350,3 +350,23 @@ messageForm.addEventListener("submit", (e) => {
   
  */
 //****************************************************************************LESSON-4-4****************************************************************************
+
+/*
+
+code to create an event listner for drop down menu
+
+var coll = document.getElementsByClassName("collapse");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display !== "none") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+*/
