@@ -88,14 +88,16 @@ function verifyingEmptyMesaages() {
 
 const editFunction = function (e) {
   const li = e.target.parentNode;
-  // const maindiv = document.createElement('div');
-  // maindiv.className = 'messageContainer';
-  // const divDate = document.createElement('div');
-  // divDate.className = "rowFlex";
-  // const divMessage = document.createElement('div');
-  // divMessage.className = "rowFlex";
-  // const divButtons = document.createElement('div');
-  // divButtons.className = "rowFlex";
+  /*
+  const maindiv = document.createElement('div');
+  maindiv.className = 'messageContainer';
+  const divDate = document.createElement('div');
+  divDate.className = "rowFlex";
+  const divMessage = document.createElement('div');
+  divMessage.className = "rowFlex";
+  const divButtons = document.createElement('div');
+  divButtons.className = "rowFlex";
+  */
 
   const name = li.firstElementChild.children[1];
   const email = li.firstElementChild.children[1];
@@ -125,14 +127,15 @@ const editFunction = function (e) {
   while (li.children.length > 0){
     li.removeChild(li.firstElementChild);
   }
-
-  // divDate.appendChild(span);
-  // divDate.appendChild(nameInput);
-  // divDate.appendChild(emailInput);
-  // divMessage.appendChild(messageInput);
-  // divButtons.appendChild(createSaveButton())
-  // divButtons.appendChild(createRemoveButton());
-  // li.appendChild(maindiv);
+/*
+  divDate.appendChild(span);
+  divDate.appendChild(nameInput);
+  divDate.appendChild(emailInput);
+  divMessage.appendChild(messageInput);
+  divButtons.appendChild(createSaveButton())
+  divButtons.appendChild(createRemoveButton());
+  li.appendChild(maindiv);
+  */
 
   const div = document.createElement('div');
   div.appendChild(span);
@@ -348,10 +351,7 @@ messageForm.addEventListener("submit", (e) => {
   messageForm.reset();
 });
   
- */
-//****************************************************************************LESSON-4-4****************************************************************************
-
-/*
+****************************************************************************LESSON-4-4****************************************************************************
 
 code to create an event listner for drop down menu
 
