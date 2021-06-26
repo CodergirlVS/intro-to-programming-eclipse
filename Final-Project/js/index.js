@@ -351,7 +351,9 @@ messageForm.addEventListener("submit", (e) => {
  */
 //****************************************************************************LESSON-4-4****************************************************************************
 
+/*
 
+code to create an event listner for drop down menu
 
 var coll = document.getElementsByClassName("collapse");
       var i;
@@ -367,3 +369,4 @@ var coll = document.getElementsByClassName("collapse");
           }
         });
       }
+*/
