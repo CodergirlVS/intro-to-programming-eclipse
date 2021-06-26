@@ -16,22 +16,30 @@
 <body>
     <nav id = 'nav'>
         <ul class = 'navBar'>
-        <li id = 'profileName'>Vaidehi Sapre</li>
-        <li><a href = 'index.html'>Home</a></li>
-        <li ><a href = '#about'>About</a></li>
-        <li><a href ='#experience'>Experience</a></li>
-        <li><a href ='#connect'>Connect</a></li>
+            <li id = 'profileName'>Vaidehi Sapre</li>
+            <li class="menu"><i class="fa fa-bars" aria-hidden="true"></i>
+                 <ul>
+                    <li class="subMenu"><a href = 'index.html'>Home</a></li>
+                    <li class="subMenu"><a href = '#about'>About</a></li>
+                    <li class="subMenu"><a href ='#experience'>Experience</a></li>
+                    <li class="subMenu"><a href ='#connect'>Connect</a></li>
+                </ul>
+        
+            </li>
         </ul>
     </nav>
+    <div class = 'site-main'>
     <header>
         <div>
-            <img src = 'https://placeimg.com/200/200/people/grayscale' 
+            <img src = 'images/profile-img.jpg' 
             alt = 'My Profile Picture' title = "Vaidehi Sapre" class = "profile-img">
-            <h1>Hello!</h1>
+            <h1>Hello, I am Vaidehi Sapre!</h1>
         </div>  
     </header>
         
         <main>
+            <div>
+            </div>
             <section id = 'about'>
                 <h2>Little Bit About Me!</h2>
                 <p>
@@ -167,6 +175,7 @@
             <!-- <small>&copy; 2021 Vaidehi's Portfolio</small>    -->
         </footer>
         <script src = 'js/index.js'>
-        </script>   
+        </script>  
+        </div> 
 </body>
 </html>

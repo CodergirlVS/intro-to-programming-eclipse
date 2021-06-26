@@ -13,7 +13,7 @@ body{
     text-align: center;
     position: fixed;
     top: 0;
-    min-height: 20px;
+    min-height: 24px;
     padding: 3px;
     box-sizing: border-box;
     display: block;
@@ -25,19 +25,46 @@ body{
     list-style-type: none;
     font-weight: 600;
     margin: 0 auto;
-    padding: 0;
     align-items: center;
-    width: 100%;
 }
 
 .navBar li {
-    padding: 5px 5px 10px 1px;
-    
+    padding: 10px;
+}
+.menu {
+    color: seashell;
+    font-size: 16px;
+}
+
+.menu > ul {
+  display: none;
+}
+
+.subMenu {
+    padding: 8px;
+    display: none;
+}
+
+.menu:hover > ul {
+    color: seashell;
+    display: block;
+    list-style: none;
+    background-color: black;
+    z-index: 20;
+    font-size: 16px;
+    position: absolute;
+    top: 38px;
+    right: 0px;
+    text-align: left;
+}
+
+.menu:hover > ul > .subMenu {
+    display: block;
 }
 
 #profileName { 
     display: block;
-    color : seashell
+    color : seashell;
 }
 
 #profileName:hover {
@@ -45,12 +72,12 @@ body{
 }
 
 .navBar a {
-    color: #0499ff;
+    color: seashell;
     text-decoration: none;
     transition: all 0.5s;
 }
 
-.navBar a:hover {
+ .navBar a:hover {
     color: lightgray;
 }
 
@@ -63,16 +90,21 @@ header {
     line-height: 1.5;
     width: 100vw;
     height: 100vh;
+    opacity: 5px;
 }
 
 .profile-img {
-    height: 250px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     border: 3px solid black;
     transition: all .125s;
-    position: relative;
-    top: 114px;
+    position: center;
+    margin-top: 80px;
+    object-fit: cover;
+    object-position: 10% 20%;
 }
+
 /* rotate(360deg)*/
 .profile-img:hover {
     transform: scale(1.1);
@@ -80,15 +112,12 @@ header {
 
 h1 {
     text-align: center;
-    font-size: 40px;
     color: seashell;
     background-color: black;
     padding: 10px;
-    display: table;
-    margin-left: 114px;
     border-radius: 5px;
-    position: relative;
-    top: 100px;
+    margin: 9px 70px;
+    font-size: 25px;
 }
 
 h2 {
@@ -99,6 +128,12 @@ p {
     font-size: 15px;
     text-align: match-parent;
     line-height: 26px;
+}
+
+#about,
+#experience,
+#skills {
+    height: 110vh;
 }
 
 #about,
@@ -132,6 +167,7 @@ h3 {
 
 h4{
     color: grey;
+    flex: 0 1 80%;
     font-size: 12px;
     margin: 0; 
 }
@@ -144,6 +180,7 @@ div.drop i {
 .collapse {
     display: flex;
     flex-direction: column;
+    max-width: 900px;
 }
 
 /* .drop {
@@ -167,7 +204,8 @@ div.drop i {
     max-height: 0;
     overflow: hidden;
     /* display: block; */
-    flex: 0 1 100%;
+    flex: 0 1 90%;
+    max-width: 800px;
 }
 
 i:hover + .content {
@@ -309,6 +347,7 @@ button {
 
 video{
     width: 85vw;
+    max-width: 780px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -326,25 +365,76 @@ footer {
     }
 
     #nav {
-        padding: 25px;
+        bottom: 0;
+        width: 15%;
+        font-size: 30px;
     }
-    .navBar li {
-        padding: 15px;
-        font-size: 20px;
-    }
-
-    /* .navBar {
-        padding: 1.3rem;
-        font-size: 1.5rem;
-    } */
     
-    .profile-img {
-        width: 300px;
-        height: 300px;
+    .navBar {
+        display: inline-block;
+    }
+    #profileName {
+        margin-top: 100px;
     }
 
+    .menu i {
+        display: none;
+    }
+
+    .menu > ul {
+        display: block;
+        padding-left: 5px;
+    }
+
+    .subMenu {
+        display: block;
+    }
+    
+    .navBar li {
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .menu:hover > ul > .subMenu {
+        position: inherit;;
+       
+    }
+
+    .site-main {
+        margin-left: 15%;
+        display: block;
+        overflow-x: clip;
+    }
+    
+    header {
+        text-align: center;
+        background: url('../images/code-background.jpg') no-repeat top center;
+        background-size: cover;
+        overflow: hidden;
+        padding-top: 60px;
+        line-height: 1.5;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .profile-img {
+        height: 300px;
+        width: 300px;
+        margin-top: 200px;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    h1 {
+        border: 2px solid gray;
+        margin-left: 42%;
+        margin-right: 42%;
+        font-size: 30px;
+    }
+    
     p {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     h3 {
@@ -362,6 +452,11 @@ footer {
     #messages,
     #endDiv {
         padding: 20px 56px 10px 56px;
+    }
+
+    #about p {
+        max-width: 800px;
+        line-height: 35px;
     }
 
     #technicalSkills, 
