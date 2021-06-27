@@ -384,6 +384,7 @@ footer {
     .navBar {
         display: inline-block;
     }
+
     #profileName {
         margin-top: 100px;
     }
@@ -420,17 +421,6 @@ footer {
         display: block;
         overflow-x: clip;
     }
-    
-    header {
-        text-align: center;
-        background: url('../images/code-background.jpg') no-repeat top center;
-        background-size: cover;
-        overflow: hidden;
-        padding-top: 60px;
-        line-height: 1.5;
-        width: 100vw;
-        height: 100vh;
-    }
 
     .profile-img,
     h1 {
@@ -447,8 +437,8 @@ footer {
     h1 {
         border: 2px solid gray;
         font-size: 30px;
-        margin-left: 42%;
-        margin-right: 42%;
+        margin-left: 38%;
+        margin-right: 38%;
     }
 
     #about,
