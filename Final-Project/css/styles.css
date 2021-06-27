@@ -26,6 +26,7 @@ body{
     font-weight: 600;
     margin: 0 auto;
     align-items: center;
+    padding: 0 20px;
 }
 
 .navBar li {
@@ -55,7 +56,7 @@ body{
     position: absolute;
     top: 38px;
     right: 0px;
-    text-align: left;
+    text-align: right;
 }
 
 .menu:hover > ul > .subMenu {
@@ -100,7 +101,7 @@ header {
     border: 3px solid black;
     transition: all .125s;
     position: center;
-    margin-top: 80px;
+    margin-top: 200px;
     object-fit: cover;
     object-position: 10% 20%;
 }
@@ -115,12 +116,13 @@ h1 {
     background-color: black;
     padding: 10px;
     border-radius: 5px;
-    margin: 9px 70px;
+    margin: 0 70px;
     font-size: 25px;
 }
 
 h2 {
     font-size: 25px;
+    padding: 20px;
 }
 
 p {
@@ -159,7 +161,7 @@ p {
 }
 
 h3 {
-    font-size: 14px;
+    font-size: 16px;
     color: gray;
     margin-bottom: 0;      
 }
@@ -208,7 +210,7 @@ i:hover + .content {
 #businessSkills,
 #personalSkills {
     list-style-type: none;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 #connect ul {
@@ -325,7 +327,49 @@ footer {
     color: slategray;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 700px) {
+    #nav { 
+        min-height: 60px;
+    }
+    
+    .navBar {
+        font-size: 22px;
+    }
+
+    .menu {
+        font-size: 20px;
+    }
+
+    .profile-img {
+        margin-top: 350px;
+        height: 250px;
+        width: 250px;
+    }
+
+    h1 {
+        margin: 0 221px;
+    }
+
+    h2 {
+        font-size: 27px;
+        margin-top: 50px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1000px) {
 
     html {
         font-size: 45px;
@@ -340,6 +384,7 @@ footer {
     .navBar {
         display: inline-block;
     }
+
     #profileName {
         margin-top: 100px;
     }
@@ -376,17 +421,6 @@ footer {
         display: block;
         overflow-x: clip;
     }
-    
-    header {
-        text-align: center;
-        background: url('../images/code-background.jpg') no-repeat top center;
-        background-size: cover;
-        overflow: hidden;
-        padding-top: 60px;
-        line-height: 1.5;
-        width: 100vw;
-        height: 100vh;
-    }
 
     .profile-img,
     h1 {
@@ -403,20 +437,8 @@ footer {
     h1 {
         border: 2px solid gray;
         font-size: 30px;
-        margin-left: 42%;
-        margin-right: 42%;
-    }
-    
-    p {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    h4 {
-        font-size: 15px;
+        margin-left: 38%;
+        margin-right: 38%;
     }
 
     #about,
@@ -430,7 +452,6 @@ footer {
 
     #about p {
         max-width: 800px;
-        line-height: 35px;
     }
 
     #technicalSkills, 
