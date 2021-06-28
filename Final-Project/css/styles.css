@@ -494,3 +494,11 @@ footer {
     .newMessageList {
         font-size: 21px;
     }
+
+    @media print {
+        body  {
+            min-height: 40%;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
