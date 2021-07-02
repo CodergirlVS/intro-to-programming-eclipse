@@ -79,7 +79,7 @@ body{
 }
 
  .navBar a:hover {
-    color: rgb(84, 87, 221);
+    color: gray;
 }
 
 header {
@@ -123,26 +123,32 @@ h1 {
 h2 {
     font-size: 25px;
     padding: 20px;
+    margin: 0;
 }
 
 p {
     font-size: 15px;
     text-align: match-parent;
     line-height: 26px;
+    margin: 0;
 }
 
 #about,
-#experience,
 #skills {
-    height: 110vh;
+    height: 100vh;
+}
+
+#experience {
+    height: 140vh;
 }
 
 #about,
 #experience,
 #skills,
 #messages,
-#endDiv,
-#connect {
+#connect,
+#endDiv
+    {
        padding: 23px;
 }
     
@@ -150,14 +156,6 @@ p {
 #connect,
 #messages {
     background-color: rgb(231, 231, 231);
-}
-
-#experience li {
-    list-style-type: none;
-}
-
-#experience ul {
-    padding: 2px;
 }
 
 h3 {
@@ -345,7 +343,8 @@ footer {
     }
 
     .menu:hover > ul {
-        right: 16px;
+        right: 5px;
+        text-align: left;
     }
 
     .profile-img {
@@ -374,6 +373,12 @@ footer {
 
     h4 {
         font-size: 18px;
+    }
+
+    #about,
+    #experience,
+    #skills {
+        height: 90vh;
     }
 
     #technicalSkills, 
@@ -516,11 +521,18 @@ footer {
     .newMessageList {
         font-size: 21px;
     }
+}
 
-    @media print {
-        body  {
-            min-height: 40%;
-            margin-top: 0;
-            padding-top: 0;
-        }
+@media print {
+    body  {
+        min-height: 40%;
+        margin-top: 0;
+        padding-top: 0;
     }
+
+    #about,
+    #experience,
+    #skills{
+        height: 60%;
+    }
+}
