@@ -88,16 +88,6 @@ function verifyingEmptyMesaages() {
 
 const editFunction = function (e) {
   const li = e.target.parentNode;
-  /*
-  const maindiv = document.createElement('div');
-  maindiv.className = 'messageContainer';
-  const divDate = document.createElement('div');
-  divDate.className = "rowFlex";
-  const divMessage = document.createElement('div');
-  divMessage.className = "rowFlex";
-  const divButtons = document.createElement('div');
-  divButtons.className = "rowFlex";
-  */
 
   const name = li.firstElementChild.children[1];
   const email = li.firstElementChild.children[1];
@@ -122,20 +112,9 @@ const editFunction = function (e) {
   const span = document.createElement('span');
   span.innerText = `${messageDate.toLocaleString()} `;
 
-  // li.innerHTML = "";
-  //for(let i = 0; i < li.children.length; i++) {
   while (li.children.length > 0){
     li.removeChild(li.firstElementChild);
   }
-/*
-  divDate.appendChild(span);
-  divDate.appendChild(nameInput);
-  divDate.appendChild(emailInput);
-  divMessage.appendChild(messageInput);
-  divButtons.appendChild(createSaveButton())
-  divButtons.appendChild(createRemoveButton());
-  li.appendChild(maindiv);
-  */
 
   const div = document.createElement('div');
   div.appendChild(span);
@@ -148,7 +127,6 @@ const editFunction = function (e) {
   li.appendChild(createRemoveButton());
   
   e.target.addEventListener('click', saveFunction);
-  // //e.target.textContent = "Save";
 };
 
 const saveFunction = function (e) {
@@ -163,10 +141,10 @@ const saveFunction = function (e) {
   }
   
   populateLi(li, name, email, message);
-  // const updatedMessage = createLi(name, email, message);
-  // li.replaceWith(updatedMessage);
+  
 };
 //Creating Save Button
+
 function createSaveButton() {
   const saveButton = document.createElement("button");
   saveButton.textContent = "Save";
@@ -177,6 +155,7 @@ function createSaveButton() {
 }
 
 //Creating Edit Button
+
 function createEditButton() {
   const editButton = document.createElement("button");
   editButton.textContent = "Edit";
@@ -187,6 +166,7 @@ function createEditButton() {
 }
 
 //Creating Remove Button
+
 function createRemoveButton() {
   const removeButton = document.createElement("button");
   removeButton.textContent = "Remove";
@@ -204,8 +184,6 @@ function createRemoveButton() {
 function formLiText(fullName, email, message) {
   const messageDate = new Date();
   const div = document.createElement('div');
-  //div.innerHTML  = `<a href = "mailto:${email}">${fullName}</a><span> wrote: ${message}</span><br>
-  //          ${messageDate.toLocaleString()}`;
   const span1 = document.createElement('span');
   span1.innerText = `${messageDate.toLocaleString()} `;
   const a = document.createElement('a');
@@ -218,6 +196,7 @@ function formLiText(fullName, email, message) {
 }
 
 // creating Li
+
 function createLi (fullName, email, message) {
   const newLi = document.createElement("li");
   newLi.classList.add('newMessageList');
@@ -239,134 +218,35 @@ messageForm.addEventListener("submit", (e) => {
   const fullName = e.target.user_name.value;
   const email = e.target.user_email.value;
   const message = e.target.user_message.value;
-  // console.log(fullName, email, message);
-  
   const newLi = createLi(fullName, email, message);
-
   messageList.appendChild(newLi);
-  
   messageForm.reset();
 });
 
-/**                 ************ CODE TO USE THE SAME BUTTON FOR EDIT AND SAVE ***********
- * 
- const messageForm = document.querySelector('[name="leave_message"]');
-const messageSection = document.querySelector("#messages");
-const messageList = messageSection.querySelector("ul");
-verifyingEmptyMesaages();
-
-function verifyingEmptyMesaages() {
-  if (messageList.children.length === 0) {
-    messageSection.style.display = "none";
-  }
-}
-
-function createRemoveButton() {
-  const removeButton = document.createElement("button");
-  removeButton.textContent = "Remove";
-  removeButton.type = "button";
-  removeButton.addEventListener("click", (event) => {
-    const entry = event.target.parentNode;
-    const ul = entry.parentNode;
-    ul.removeChild(entry);
-    verifyingEmptyMesaages();
-  });
-  return removeButton;
-}
-
-const editMessageButtonOnClick = function (buttonEditEvent) {
-  const li = buttonEditEvent.target.parentNode;
-
-  const editedMessageSpan = li.children[2];
-  console.log(editedMessageSpan);
-  const editedMessageInput = document.createElement("input");
-  editedMessageInput.type = "text";
-  editedMessageInput.value = editedMessageSpan.textContent;
-  li.insertBefore(editedMessageInput, editedMessageSpan);
-  li.removeChild(editedMessageSpan);
-
-  const editedNameSpan = li.children[0];
-  const editedNameInput = document.createElement("input");
-  editedNameInput.type = "text";
-  editedNameInput.value = editedNameSpan.textContent;
-  li.insertBefore(editedNameInput, editedNameSpan);
-  li.removeChild(editedNameSpan);
-  console.log("check");
-  buttonEditEvent.target.removeEventListener("click", editMessageButtonOnClick);
-  buttonEditEvent.target.addEventListener("click", saveMessageButtonOnClick);
-  buttonEditEvent.target.textContent = "Save";
+const githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', "https://api.github.com/users/CodergirlVS/repos");
+githubRequest.send();
+githubRequest.onload = function () {
+  const repositories = JSON.parse(this.response);
+  console.log(repositories);
+  const projectSection = document.getElementById('projects');
+  const projectList = projectSection.querySelector('ul');
+    for(i = 0; i < repositories.length; i++){
+      const project = document.createElement('li');
+      project.className = "repoList";
+      const atag = document.createElement('a');
+      atag.className = "projectLink";
+      atag.href = repositories[i].html_url;
+      atag.innerText = repositories[i].name;
+      const ptag = document.createElement('p');
+      ptag.innerText = repositories[i].created_at;
+      projectList.appendChild(project);
+      project.appendChild(atag);
+      project.appendChild(ptag);
+    }
 };
 
-const saveMessageButtonOnClick = function (event) {
-  const li = event.target.parentNode;
 
-  const updatedMessageInput = li.children[2];
-  const updatedMessageSpan = document.createElement("span");
-  console.log(updatedMessageInput);
-  updatedMessageSpan.textContent = updatedMessageInput.value;
-  li.insertBefore(updatedMessageSpan, updatedMessageInput);
-  li.removeChild(updatedMessageInput);
 
-  const updatedNameInput = li.children[0];
-  const updatedNameSpan = document.createElement("span");
-  updatedNameSpan.textContent = updatedNameInput.value;
-  li.insertBefore(updatedNameSpan, updatedNameInput);
-  li.removeChild(updatedNameInput);
-  console.log("save");
-  event.target.removeEventListener("click", saveMessageButtonOnClick);
-  event.target.addEventListener("click", editMessageButtonOnClick);
-  event.target.textContent = "Edit";
-};
 
-function createEditButton() {
-  // edit function
-  const editButton = document.createElement("button");
-  editButton.textContent = "Edit";
-  editButton.type = "Edit";
 
-  editButton.addEventListener("click", editMessageButtonOnClick);
-  console.log("edit is done");
-
-  console.log("save is done");
-  return editButton;
-}
-
-messageForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  messageSection.style.display = "block";
-  const fullName = e.target.user_name.value;
-  const email = e.target.user_email.value;
-  const message = e.target.user_message.value;
-  console.log(fullName, email, message);
-  const newMessage = document.createElement("li");
-  newMessage.innerHTML = `<a href = "mailto:${email}">${fullName}</a>
-                            <span> wrote: </span> <span>${message}</span>`;
-
-  const removeButton = createRemoveButton();
-  const editButton = createEditButton();
-
-  messageList.appendChild(newMessage);
-  newMessage.appendChild(removeButton);
-  newMessage.appendChild(editButton);
-  messageForm.reset();
-});
-  
-****************************************************************************LESSON-4-4****************************************************************************
-
-code to create an event listner for drop down menu
-
-var coll = document.getElementsByClassName("collapse");
-      var i;
-
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display !== "none") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
-*/
