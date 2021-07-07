@@ -223,6 +223,8 @@ messageForm.addEventListener("submit", (e) => {
   messageForm.reset();
 });
 
+//*****************************Lesson-6-1*******************************************************
+
 const githubRequest = new XMLHttpRequest();
 githubRequest.open('GET', "https://api.github.com/users/CodergirlVS/repos");
 githubRequest.send();
