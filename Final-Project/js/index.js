@@ -243,8 +243,7 @@ githubRequest.onload = function () {
       const ptag = document.createElement('p');
       ptag.innerText = repositories[i].created_at;
       projectList.appendChild(project);
-      project.appendChild(atag);
-      project.appendChild(ptag);
+      project.appendChild(atag, ptag);
     }
 };
 
