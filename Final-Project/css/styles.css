@@ -47,7 +47,6 @@ body{
 }
 
 .menu:hover > ul {
-    color: seashell;
     display: block;
     list-style: none;
     background-color: black;
@@ -107,7 +106,7 @@ header {
 }
 
 .profile-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
 }
 
 h1 {
@@ -145,16 +144,16 @@ p {
 #about,
 #experience,
 #skills,
+#projects,
 #messages,
 #connect,
 #endDiv
     {
        padding: 23px;
 }
-    
-#experience,
-#connect,
-#messages {
+
+main > section:nth-child(odd),
+#endDiv{
     background-color: rgb(231, 231, 231);
 }
 
@@ -171,30 +170,29 @@ h4{
     margin: 0; 
 }
 
-div.drop i {
+.subDiv i {
     font-size: 24px;
     margin-left: 8px;  
 }
 
-.collapse {
+.collapseDiv {
     display: flex;
     flex-direction: column;
     max-width: 900px;
 }
 
-.drop {
+.subDiv {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    text-decoration: none;
     border-bottom: 2px solid gray;
 }
 
 .content {
+    padding-top: 10px;
     max-height: 0;
     overflow: hidden;
-    flex: 0 1 90%;
     max-width: 800px;
 }
 
@@ -209,6 +207,14 @@ i:hover + .content {
 #personalSkills {
     list-style-type: none;
     font-size: 15px;
+}
+
+.repoList {
+    list-style-type: none;
+}
+
+.projectLink {
+    font-size: 18px;
 }
 
 #connect ul {
@@ -343,7 +349,7 @@ footer {
     }
 
     .menu:hover > ul {
-        right: 5px;
+        
         text-align: left;
     }
 
@@ -385,6 +391,11 @@ footer {
     #businessSkills, 
     #personalSkills {
         font-size: 20px;
+    }
+
+    .projectLink {
+        font-size: 26px;
+        font-weight: bold;
     }
 
     .fa.icon {
@@ -467,6 +478,7 @@ footer {
     #about,
     #experience,
     #skills,
+    #projects,
     #connect,
     #messages,
     #endDiv {
@@ -481,6 +493,11 @@ footer {
     #businessSkills, 
     #personalSkills {
         font-size: 16px;
+    }
+
+    .projectLink {
+        font-size: 26px;
+        font-weight: bold;
     }
 
     .fa.icon {
@@ -525,14 +542,28 @@ footer {
 
 @media print {
     body  {
-        min-height: 40%;
-        margin-top: 0;
+        margin: 20px 0;
         padding-top: 0;
     }
 
-    #about,
-    #experience,
-    #skills{
-        height: 60%;
+    #nav {
+        display: none;
+    }
+
+    main > section {
+        height: fit-content;
+    }
+
+    .subDiv {
+        display: block
+    }
+
+    .content{
+        overflow: visible;
+        max-height: 600px;
+    }
+
+    .subDiv > i {
+        display: none;
     }
 }
