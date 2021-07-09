@@ -229,7 +229,7 @@ const githubRequest = new XMLHttpRequest();
 githubRequest.open('GET', "https://api.github.com/users/CodergirlVS/repos");
 githubRequest.send();
 githubRequest.onload = function () {
-  if(githubRequest.readyState === 4 && githubRequest.status === 200){
+  if(githubRequest.readyState === 4 && githubRequest.status === 200) {
     const repositories = JSON.parse(this.response);
     console.log(repositories);
     const projectSection = document.getElementById('projects');
