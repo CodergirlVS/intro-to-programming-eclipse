@@ -229,22 +229,24 @@ const githubRequest = new XMLHttpRequest();
 githubRequest.open('GET', "https://api.github.com/users/CodergirlVS/repos");
 githubRequest.send();
 githubRequest.onload = function () {
-  const repositories = JSON.parse(this.response);
-  console.log(repositories);
-  const projectSection = document.getElementById('projects');
-  const projectList = projectSection.querySelector('ul');
-    for(i = 0; i < repositories.length; i++){
-      const project = document.createElement('li');
-      project.className = "repoList";
-      const atag = document.createElement('a');
-      atag.className = "projectLink";
-      atag.href = repositories[i].html_url;
-      atag.innerText = repositories[i].name;
-      const ptag = document.createElement('p'); 
-      ptag.innerText = repositories[i].created_at.slice(0,10) + "\n" + repositories[i].description;
-      projectList.appendChild(project);
-      project.append(atag, ptag);
+  if(githubRequest.readyState === 4 && githubRequest.status === 200){
+    const repositories = JSON.parse(this.response);
+    console.log(repositories);
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+      for(i = 0; i < repositories.length; i++){
+        const project = document.createElement('li');
+        project.className = "repoList";
+        const atag = document.createElement('a');
+        atag.className = "projectLink";
+        atag.href = repositories[i].html_url;
+        atag.innerText = repositories[i].name;
+        const ptag = document.createElement('p'); 
+        ptag.innerText = repositories[i].created_at.slice(0,10) + "\n" + repositories[i].description;
+        projectList.appendChild(project);
+        project.append(atag, ptag);
     }
+  }
 };
 
 
