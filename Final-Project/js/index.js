@@ -240,10 +240,10 @@ githubRequest.onload = function () {
       atag.className = "projectLink";
       atag.href = repositories[i].html_url;
       atag.innerText = repositories[i].name;
-      const ptag = document.createElement('p');
-      ptag.innerText = repositories[i].created_at;
+      const ptag = document.createElement('p'); 
+      ptag.innerText = repositories[i].created_at.slice(0,10) + "\n" + repositories[i].description;
       projectList.appendChild(project);
-      project.appendChild(atag, ptag);
+      project.append(atag, ptag);
     }
 };
 
