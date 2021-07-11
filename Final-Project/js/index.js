@@ -223,32 +223,33 @@ messageForm.addEventListener("submit", (e) => {
   messageForm.reset();
 });
 
-//*****************************Lesson-6-1*******************************************************
+//*************************************Lessaon-6-2**************************************************
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', "https://api.github.com/users/CodergirlVS/repos");
-githubRequest.send();
-githubRequest.onload = function () {
-  if(githubRequest.readyState === 4 && githubRequest.status === 200) {
-    const repositories = JSON.parse(this.response);
-    console.log(repositories);
+fetch("https://api.github.com/users/CodergirlVS/repos")
+  .then(response => response.json())
+  .then(data => {onload(data)
+  throw('Test Error')
+  }
+  )
+  .catch(error => {
+    alert('Ooops!'+' '+ error)
+  })
+function onload (data) {
     const projectSection = document.getElementById('projects');
     const projectList = projectSection.querySelector('ul');
-      for(i = 0; i < repositories.length; i++){
+      for(i = 0; i < data.length; i++){
         const project = document.createElement('li');
         project.className = "repoList";
         const atag = document.createElement('a');
         atag.className = "projectLink";
-        atag.href = repositories[i].html_url;
-        atag.innerText = repositories[i].name;
+        atag.href = data[i].html_url;
+        atag.innerText = data[i].name;
         const ptag = document.createElement('p'); 
-        ptag.innerText = repositories[i].created_at.slice(0,10) + "\n" + repositories[i].description;
+        ptag.innerText = data[i].created_at.slice(0,10) + "\n" + data[i].description;
         projectList.appendChild(project);
         project.append(atag, ptag);
     }
   }
-};
-
 
 
 
