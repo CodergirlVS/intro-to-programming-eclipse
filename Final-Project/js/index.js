@@ -228,8 +228,8 @@ messageForm.addEventListener("submit", (e) => {
 fetch("https://api.github.com/users/CodergirlVS/repos")
   .then(response => response.json())
   .then(data => {onload(data)
-  throw('Test Error')
-  }
+      throw('Test Error')
+      }
   )
   .catch(error => {
     alert('Ooops!'+' '+ error)
