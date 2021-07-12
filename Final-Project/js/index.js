@@ -247,7 +247,7 @@ function onload (data) {
         projectList.appendChild(project);
         project.append(atag, ptag);
     }
-}
+};
 
 
 
