@@ -226,12 +226,22 @@ messageForm.addEventListener("submit", (e) => {
 //*************************************Lessaon-6-2**************************************************
 
 fetch("https://api.github.com/users/CodergirlVS/repos")
+  .then(checkStatus)  
   .then(response => response.json())
   .then(data => onload(data)
   )
   .catch(error => {
     alert('Ooops!'+' '+ error)
   })
+
+function checkStatus(response) {
+  if(response === 200) {
+    return Promise.resolve(response);
+  }else {
+    return Promise.reject(new Error (response.statusText));
+  }
+};
+
 function onload (data) {
     const projectSection = document.getElementById('projects');
     const projectList = projectSection.querySelector('ul');
