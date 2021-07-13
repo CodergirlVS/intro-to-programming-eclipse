@@ -231,11 +231,11 @@ fetch("https://api.github.com/users/CodergirlVS/repos")
   .then(data => onload(data)
   )
   .catch(error => {
-    alert('Ooops!'+' '+ error)
+    console.log('Ooops!'+' '+ error)
   })
 
 function checkStatus(response) {
-  if(response === 200) {
+  if(response.ok) {
     return Promise.resolve(response);
   }else {
     return Promise.reject(new Error (response.statusText));
