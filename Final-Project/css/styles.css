@@ -1,0 +1,569 @@
+/* Styling sheet for index.html */
+
+body{
+    font-family :Arial, Helvetica, sans-serif;
+    background-color: #f7f5f0;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    width: 100vw;
+    background: black;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    min-height: 24px;
+    padding: 3px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font-weight: 600;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navBar li {
+    padding: 10px;
+}
+.menu {
+    color: seashell;
+    font-size: 16px;
+}
+
+.menu > ul {
+  display: none;
+}
+
+.subMenu {
+    padding: 8px;
+    display: none;
+}
+
+.menu:hover > ul {
+    display: block;
+    list-style: none;
+    background-color: black;
+    z-index: 20;
+    font-size: 16px;
+    position: absolute;
+    top: 38px;
+    right: 0px;
+    text-align: right;
+}
+
+.menu:hover > ul > .subMenu {
+    display: block;
+}
+
+#profileName { 
+    display: block;
+    color : seashell;
+}
+
+#profileName:hover {
+    color: tomato;
+}
+
+.navBar a {
+    color: seashell;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+ .navBar a:hover {
+    color: gray;
+}
+
+header {
+    text-align: center;
+    background: url('../images/code-background.jpg') no-repeat top center;
+    background-size: cover;
+    overflow: hidden;
+    padding-top: 60px;
+    line-height: 1.5;
+    width: 100vw;
+    height: 100vh;
+    opacity: 5px;
+}
+
+.profile-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid black;
+    transition: all .125s;
+    position: center;
+    margin-top: 200px;
+    object-fit: cover;
+    object-position: 10% 20%;
+}
+
+.profile-img:hover {
+    transform: scale(1.5);
+}
+
+h1 {
+    text-align: center;
+    color: seashell;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 70px;
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 25px;
+    padding: 20px;
+    margin: 0;
+}
+
+p {
+    font-size: 15px;
+    text-align: match-parent;
+    line-height: 26px;
+    margin: 0;
+}
+
+#about,
+#skills {
+    height: 100vh;
+}
+
+#experience {
+    height: 140vh;
+}
+
+#about,
+#experience,
+#skills,
+#projects,
+#messages,
+#connect,
+#endDiv
+    {
+       padding: 23px;
+}
+
+main > section:nth-child(odd),
+#endDiv{
+    background-color: rgb(231, 231, 231);
+}
+
+h3 {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 0;      
+}
+
+h4{
+    color: grey;
+    flex: 0 1 80%;
+    font-size: 12px;
+    margin: 0; 
+}
+
+.subDiv i {
+    font-size: 24px;
+    margin-left: 8px;  
+}
+
+.collapseDiv {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+}
+
+.subDiv {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+}
+
+.content {
+    padding-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    max-width: 800px;
+}
+
+i:hover + .content {
+    max-height: 300px;
+    transition: max-height 2s ease-in 0.2s;
+    cursor: pointer;
+}
+
+#technicalSkills,
+#businessSkills,
+#personalSkills {
+    list-style-type: none;
+    font-size: 15px;
+}
+
+.repoList {
+    list-style-type: none;
+}
+
+.projectLink {
+    font-size: 18px;
+}
+
+#connect ul {
+    padding: 4px;
+}
+
+.connectList {
+    display: inline-block;
+    list-style-type: none;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: black;
+    margin-left: 12px;
+}
+
+.connectList:nth-child(even) {
+    background-color: #0499ff;
+}
+
+.fa.icon {
+    font-size: 40px;
+}
+
+.link {
+    color: white;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inlineInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.userInputLabel {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 11px;
+}
+
+.userInput {
+    width: 80%; 
+    height: 30px;
+    font-size: 17px;
+}
+
+.userInput:focus  {
+    background-color: lightgray;
+}
+
+#userMessageLabel {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 11px;
+    display: block;
+}
+
+#userMessageInput:focus {
+    background-color: lightgray;
+}
+
+#userMessageInput {
+    width: 80%;
+    height: 50px;
+    font-size: 17px;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 17px;
+    color: lightgray;
+    width: 80px;
+    align-self: center;
+}
+
+.buttons {
+    background-color: GRAY;
+}
+
+.newMessageList {
+    border-bottom: 3px solid black;
+}
+
+.newMessageList a {
+    font-weight: bold;
+}
+
+#endDiv {
+    padding: 23px;
+}
+
+#endDiv h2 {
+    text-align: center;
+}
+
+video{
+    width: 85vw;
+    max-width: 780px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    text-align: center;
+    color: slategray;
+}
+
+@media (min-width: 700px) {
+    #nav { 
+        min-height: 60px;
+    }
+    
+    .navBar {
+        font-size: 22px;
+    }
+
+    .menu {
+        font-size: 20px;
+    }
+
+    .menu:hover > ul {
+        
+        text-align: left;
+    }
+
+    .profile-img {
+        margin-top: 350px;
+        height: 250px;
+        width: 250px;
+    }
+
+    h1 {
+        margin: 0 221px;
+    }
+
+    h2 {
+        font-size: 27px;
+        margin-top: 50px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    #about,
+    #experience,
+    #skills {
+        height: 90vh;
+    }
+
+    #technicalSkills, 
+    #businessSkills, 
+    #personalSkills {
+        font-size: 20px;
+    }
+
+    .projectLink {
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .fa.icon {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1300px) {
+
+    html {
+        font-size: 45px;
+    }
+
+    #nav {
+        bottom: 0;
+        width: 15%;
+        font-size: 30px;
+    }
+    
+    .navBar {
+        display: inline-block;
+    }
+
+    #profileName {
+        margin-top: 100px;
+    }
+
+    .menu i {
+        display: none;
+    }
+
+    .menu > ul {
+        display: block;
+        padding-left: 5px;
+    }
+
+    .subMenu {
+        display: block;
+    }
+    
+    .navBar li {
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .menu:hover > ul {
+        position: inherit;
+    }
+
+    .menu:hover > ul > .subMenu {
+        position: inherit; 
+    }
+
+    .site-main {
+        margin-left: 15%;
+        display: block;
+        overflow-x: clip;
+    }
+
+    .profile-img,
+    h1 {
+        position:relative;
+        left: -10%;
+    }
+
+    .profile-img {
+        height: 300px;
+        width: 300px;
+        margin-top: 200px;
+    }
+
+    h1 {
+        border: 2px solid gray;
+        font-size: 30px;
+        margin-left: 38%;
+        margin-right: 38%;
+    }
+
+    #about,
+    #experience,
+    #skills,
+    #projects,
+    #connect,
+    #messages,
+    #endDiv {
+        padding: 20px 56px 10px 56px;
+    }
+
+    #about p {
+        max-width: 800px;
+    }
+
+    #technicalSkills, 
+    #businessSkills, 
+    #personalSkills {
+        font-size: 16px;
+    }
+
+    .projectLink {
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .fa.icon {
+        font-size: 40px;
+    }
+
+    #connect ul {
+        padding: 0px;
+    }
+
+    .link {
+        font-size: 23px;
+    }
+
+    #form{
+        box-sizing: border-box;
+    }
+
+    .inlineInput{
+        display: inline-flex;
+        width: 47%;
+        flex-direction: column;
+    }
+
+    .userInputLabel {
+        margin-top: 0;
+    }
+
+    #userMessageInput {
+        height: 76px;
+        width: 87%;
+    }
+
+    .buttons {
+        width: 15%;
+    }
+
+    .newMessageList {
+        font-size: 21px;
+    }
+}
+
+@media print {
+    body  {
+        margin: 20px 0;
+        padding-top: 0;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    main > section {
+        height: fit-content;
+    }
+
+    .subDiv {
+        display: block
+    }
+
+    .content{
+        overflow: visible;
+        max-height: 600px;
+    }
+
+    .subDiv > i {
+        display: none;
+    }
+}
