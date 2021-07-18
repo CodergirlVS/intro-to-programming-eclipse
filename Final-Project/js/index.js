@@ -3,7 +3,7 @@
 const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
-const copyright = document.createElement("p");
+const copyright = document.getElementById("footerP");
 copyright.innerHTML = `&copy; Vaidehi ${thisYear}`;
 footer.appendChild(copyright);
 
@@ -254,8 +254,10 @@ function onload (data) {
         atag.innerText = data[i].name;
         const ptag = document.createElement('p'); 
         ptag.innerText = data[i].created_at.slice(0,10) + "\n" + data[i].description;
+        const itag = document.createElement('i');
+        itag.className = "pin";
         projectList.appendChild(project);
-        project.append(atag, ptag);
+        project.append(atag, ptag, itag);
     }
 };
 

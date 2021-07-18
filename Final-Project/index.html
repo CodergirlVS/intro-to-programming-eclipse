@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Satisfy">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -21,16 +22,15 @@
                  <ul>
                     <li class="subMenu"><a href = 'index.html'>home</a></li>
                     <li class="subMenu"><a href = '#about'>about</a></li>
-                    <li class="subMenu"><a href ='#experience'>experience</a></li>
-                    <li class="subMenu"><a href ='#skills'>my offer</a></li>
-                    <li class="subMenu"><a href ='#projects'>projects</a></li>
-                    <li class="subMenu"><a href ='#connect'>connect</a></li>
+                    <li class="subMenu"><a href = '#experience'>experience</a></li>
+                    <li class="subMenu"><a href = '#skills'>my offer</a></li>
+                    <li class="subMenu"><a href = '#projects'>projects</a></li>
+                    <li class="subMenu"><a href = '#connect'>connect</a></li>
                 </ul>
-        
             </li>
         </ul>
     </nav>
-    <div class = 'site-main'>
+    <div id = 'site-main'>
     <header>
         <div>
             <img src = 'images/profile-img.jpg' 
@@ -38,148 +38,156 @@
             <h1>Hello, I am Vaidehi Sapre!</h1>
         </div>  
     </header>
-        
-        <main>
-            <div>
+    <main>
+        <div>
+        </div>
+        <section id = 'about'>
+            <h2>Little Bit About Me!</h2> <br>
+            <p>
+                Hi! My name is Vaidehi Sapre, and this is my space on the web where you can get to know me more. 
+                I live in Pleasanton, California which is the home of Silicon Valley.
+                I hold a Masters in Accounting and Finance and am currently learning to be 
+                a <em>Fullstack Developer with Code The Dream</em>. My journey into coding began while
+                I was working with my daughter's school PTA, managing and creating content for 
+                their PTA Website. I had somuch fun doing it and now am very passionate about it too.
+                <br><br>
+                In my free time I enjoy paying tennis, gardening, knitting, and hiking. I believe in sharing
+                and I’m excited to bring my life experience to the process of building fantastic 
+                looking websites.
+            </p>
+        </section>
+
+        <section id = 'experience'>
+            <h2>Experience!</h2>
+                <p> I have worked in lots of different jobs and here is the list 
+                of my past experiences:</p>
+            <div class = 'collapseDiv'>
+                <h3> WNS Global Services, Mumbai-India,  Sr. Analyst</h3>
+                <div class = 'subDiv'>
+                    <h4>September 2008 - September 2010</h4></li>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <p class = 'content'>
+                        Migrated Revenue Recognition and Allocation Process of USA 
+                        based Insurance giant. Involved in end-to-end process migration and setup. 
+                        Managed team of 8 members. Awarded for conceptualizing and implementing 
+                        process improvement changes.
+                    </p>
+                </div>   
+            </div>  
+            
+            <div class = 'collapseDiv'>       
+                <h3> JPMorgan Chase  Co., Mumbai-India, Team Member</h3>
+                <div class = 'subDiv'>
+                    <h4>February 2006 - March 2008</h4>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <p class = 'content'>
+                        Involved in the BankOne and JP Morgan Chase Merger project for 
+                        Accounts payable Department. Managed different areas within the 
+                        Accounts Payable Team like payment processing and daily Audit. 
+                        As SME was point of contact for vendor customer service and external 
+                        and Internal Audit teams. Awarded for maintaining highest quality and 
+                        detail oriented performance. Managed workload distribution within the team.
+                    </p>
+                </div>
             </div>
-            <section id = 'about'>
-                <h2>Little Bit About Me!</h2> <br>
-                <p>
-                    Hi! My name is Vaidehi Sapre, and this is my space on the web where you can get to know me more. 
-                    I live in Pleasanton, California which is the home of Silicon Valley.
-                    I hold a Masters in Accounting and Finance and am currently learning to be 
-                    a Fullstack Developer with Code The Dream. My journey into coding began while
-                    I was working with my daughter's school PTA, managing and creating content for 
-                    their PTA Website. I had somuch fun doing it and now am very passionate about it too.
-                    In my free time I enjoy paying tennis, gardening, knitting, and hiking. I believe in sharing
-                    and I’m excited to bring my life experience to the process of building fantastic 
-                    looking websites.
-                </p>
-            </section>
 
-            <section id = 'experience'>
-                <h2>Experience!</h2>
-                    <p> I have worked in lots of different jobs and here is the list 
-                    of my past experiences:</p>
-                <div class = 'collapseDiv'>
-                    <h3> WNS Global Services, Mumbai-India,  Sr. Analyst</h3>
-                    <div class = 'subDiv'>
-                        <h4>September 2008 - September 2010</h4></li>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <p class = 'content'>
-                            Migrated Revenue Recognition and Allocation Process of USA 
-                            based Insurance giant. Involved in end-to-end process migration and setup. 
-                            Managed team of 8 members. Awarded for conceptualizing and implementing 
-                            process improvement changes.
-                        </p>
-                    </div>   
-                </div>  
-                
-                <div class = 'collapseDiv'>       
-                    <h3> JPMorgan Chase  Co., Mumbai-India, Team Member</h3>
-                    <div class = 'subDiv'>
-                        <h4>February 2006 - March 2008</h4>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <p class = 'content'>
-                            Involved in the BankOne and JP Morgan Chase Merger project for 
-                            Accounts payable Department. Managed different areas within the 
-                            Accounts Payable Team like payment processing and daily Audit. 
-                            As SME was point of contact for vendor customer service and external 
-                            and Internal Audit teams. Awarded for maintaining highest quality and 
-                            detail oriented performance. Managed workload distribution within the team.
-                        </p>
-                    </div>
+            <div class = 'collapseDiv'>    
+                <h3> Arafat Heatreaters Fabricators Pvt. Ltd, Mumbai-India, Operations Executive</h3>
+                <div class = 'subDiv'>
+                    <h4>August 2005 - November 2005</h4>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <p class = 'content'>
+                        Managed day to day operations of the company and improved 
+                        process efficiency by organizing and prioritizing existing 
+                        resources towards set targets. Worked on customer acquisition strategies. 
+                        Coordinated with our Global agents and clients.
+                    </p>
                 </div>
+            </div>
 
-                <div class = 'collapseDiv'>    
-                    <h3> Arafat Heatreaters Fabricators Pvt. Ltd, Mumbai-India, Operations Executive</h3>
-                    <div class = 'subDiv'>
-                        <h4>August 2005 - November 2005</h4>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <p class = 'content'>
-                            Managed day to day operations of the company and improved 
-                            process efficiency by organizing and prioritizing existing 
-                            resources towards set targets. Worked on customer acquisition strategies. 
-                            Coordinated with our Global agents and clients.
-                        </p>
-                    </div>
+            <div class = 'collapseDiv'> 
+                <h3> Ramada International, Mumbai-India, Financial Administrator</h3>
+                <div class = 'subDiv'>
+                    <h4> August 2004 - August 2005</h4>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <p class = 'content'> 
+                        Worked on improving bank relations for import export transactions and 
+                        improved accuracy of Financial Report by performing Audit. Reported 
+                        and analyzed Financial Statements and performed Bank Reconciliation. 
+                    </p>
                 </div>
+            </div>
 
-                <div class = 'collapseDiv'> 
-                    <h3> Ramada International, Mumbai-India, Financial Administrator</h3>
-                    <div class = 'subDiv'>
-                        <h4> August 2004 - August 2005</h4>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <p class = 'content'> 
-                            Worked on improving bank relations for import export transactions and 
-                            improved accuracy of Financial Report by performing Audit. Reported 
-                            and analyzed Financial Statements and performed Bank Reconciliation. 
-                        </p>
-                    </div>
-                </div>
-    
-            </section>
-            
-            <section id = "skills">
-                <h2>Skills</h2>
-                <h3>Technical Skills:</h3>
-                    <ul id = 'technicalSkills'></ul>
-                <h3>Business Skills:</h3>
-                    <ul id = 'businessSkills'></ul>
-                <h3>Personal Skills:</h3>
-                    <ul id = 'personalSkills'></ul>
-            </section>
+        </section>
+        
+        <section id = "skills">
+            <h2>Skills</h2>
+            <h3>Technical Skills:</h3>
+                <ul id = 'technicalSkills'></ul>
+            <h3>Business Skills:</h3>
+                <ul id = 'businessSkills'></ul>
+            <h3>Personal Skills:</h3>
+                <ul id = 'personalSkills'></ul>
+        </section>
 
-            <section id = "projects">
-                <h2> Projects</h2>
-                <ul></ul>
-            </section>
+        <section id = "projects">
+            <h2> Projects</h2>
+            <ul></ul>
+        </section>
 
-            <section id = 'connect'>
-                <h2>Connect with me here!</h2>
+        <section id = 'connect'>
+            <h2>Connect with me here!</h2>
+            <ul>
+                <li class = 'connectList'><a class = 'link' href = 'https://github.com/CodergirlVS' alt = "GitHub Account CodergirlVS"><i class="fa fa-github-square icon" aria-hidden="true"></i></a></li>
+                <li class = 'connectList'><a class = 'link' href = 'https://www.linkedin.com/in/vaidehi-s-88b32349/' alt = 'Linkedin Account link'><i class="fa fa-linkedin-square icon" aria-hidden="true"></i></a></li>
+                <li class = 'connectList'><a class = 'link' href = 'mailto:vaidehis1214@gmail.com? subject = Hi%20There!%20FirstMail.' alt = 'gmail Account'><i class="fa fa-envelope-o icon" aria-hidden="true"></i></a></li>
+            </ul>
+        <section id = 'form'>
+            <h2>Leave a Message</h2>
+            <form action = 'index.html' method = 'post' name = "leave_message">
+            <div class = 'inlineInput'>
+                <label class = 'userInputLabel'>Full Name:</label>
+                <input type = "text" class = 'userInput' name = "user_name" required = 'true' placeholder = 'Adam Smith'>
+            </div>
+            <div class = 'inlineInput'> 
+                <label class = 'userInputLabel'>Email:</label>
+                <input type = "email" class = 'userInput' name = "user_email" required = 'true' placeholder = 'abc@xyz.com'>
+            </div>
+            <div>
+                <label id = 'userMessageLabel'>Message:</label>
+                <textarea id = 'userMessageInput' name = "user_message" required = 'true'></textarea>
+            </div>
+                <button type = "submit" class = 'buttons'>Submit</button>
+            </form>
+        </section>
+        </section>
+        
+        <section id = 'messages'>
+            <h2>Messages:</h2>
                 <ul>
-                    <li class = 'connectList'><a class = 'link' href = 'https://github.com/CodergirlVS' alt = "GitHub Account CodergirlVS"><i class="fa fa-github-square icon" aria-hidden="true"></i></a></li>
-                    <li class = 'connectList'><a class = 'link' href = 'https://www.linkedin.com/in/vaidehi-s-88b32349/' alt = 'Linkedin Account link'><i class="fa fa-linkedin-square icon" aria-hidden="true"></i></a></li>
-                    <li class = 'connectList'><a class = 'link' href = 'mailto:vaidehis1214@gmail.com? subject = Hi%20There!%20FirstMail.' alt = 'gmail Account'><i class="fa fa-envelope-o icon" aria-hidden="true"></i></a></li>
                 </ul>
-            <section id = 'form'>
-                <h2>Leave a Message</h2>
-                <form action = 'index.html' method = 'post' name = "leave_message">
-                <div class = 'inlineInput'>
-                    <label class = 'userInputLabel'>Full Name:</label>
-                    <input type = "text" class = 'userInput' name = "user_name" required = 'true' placeholder = 'Adam Smith'>
-                </div>
-                <div class = 'inlineInput'> 
-                    <label class = 'userInputLabel'>Email:</label>
-                    <input type = "email" class = 'userInput' name = "user_email" required = 'true' placeholder = 'abc@xyz.com'>
-                </div>
-                <div>
-                    <label id = 'userMessageLabel'>Message:</label>
-                    <textarea id = 'userMessageInput' name = "user_message" required = 'true'></textarea>
-                </div>
-                    <button type = "submit" class = 'buttons'>Submit</button>
-                </form>
-            </section>
-            </section>
-            
-            <section id = 'messages'>
-                <h2>Messages:</h2>
-                    <ul>
-                    </ul>
-            </section>
-        </main>
+        </section>
+    </main>
             <div id = 'endDiv'>
                 <h2>Come Back Again!!</h2>
-                <video controls
+                <video autoplay loop
                 src = "video/Enjoy your Summers.mp4"
                 type = "video/mp4">
                 </video>
             </div>
-        <footer> 
+        </div> 
+        <footer>
+            <p id ="footerP"></p>
+            <!-- <small>&copy; 2021 Vaidehi's Portfolio</small>    -->
+            <ul>
+                <li class = 'footerList'><a class = 'link' href = 'https://github.com/CodergirlVS' alt = "GitHub Account CodergirlVS"><i class="fa fa-github-square icon" aria-hidden="true"></i></a></li>
+                <li class = 'footerList'><a class = 'link' href = 'https://www.linkedin.com/in/vaidehi-s-88b32349/' alt = 'Linkedin Account link'><i class="fa fa-linkedin-square icon" aria-hidden="true"></i></a></li>
+                <li class = 'footerList'><a class = 'link' href = 'mailto:vaidehis1214@gmail.com? subject = Hi%20There!%20FirstMail.' alt = 'gmail Account'><i class="fa fa-envelope-o icon" aria-hidden="true"></i></a></li>           
+            </ul>
             <!-- <small>&copy; 2021 Vaidehi's Portfolio</small>    -->
         </footer>
         <script src = 'js/index.js'>
         </script>  
-        </div> 
+        
 </body>
 </html>
