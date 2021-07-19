@@ -379,7 +379,7 @@ footer {
     padding: 0 10px;
     color: slategray;
 }
-
+        /* <For IPad and Tablet view>  */
 @media (min-width: 700px) {
     #nav { 
         height: 70px;
@@ -400,7 +400,7 @@ footer {
     }
 
     header {
-        height: 90vh;
+        height: 80vh;
     }
 
     .profile-img {
@@ -432,16 +432,6 @@ footer {
         font-size: 18px;
     }
 
-    #about,
-    #skills,
-    #projects {
-        height: 83vh;
-    }
-
-    #experience {
-        height: 95vh;
-    }
-
     .collapseDiv{
         padding: 20px;
     }
@@ -469,7 +459,6 @@ footer {
         height: 160px;
         margin: 0 auto;
         padding: 10px;
-        position: relative;
         transform: rotate(2deg)
     }
 
@@ -502,6 +491,10 @@ footer {
 
     .fa.icon {
         font-size: 40px;
+    }
+
+    footer {
+        height: 18vh;
     }
 }
 
@@ -656,6 +649,10 @@ footer {
     #endDiv,
     footer {
         margin-left: 15%;
+    }
+
+    footer {
+        height: 5vh;
     }
 }
 
