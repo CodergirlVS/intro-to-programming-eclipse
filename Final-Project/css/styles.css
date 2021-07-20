@@ -1,43 +1,43 @@
-  /* Styling sheet for index.html */
+/* Styling sheet for index.html */
 
-body{
-    font-family :Arial, Helvetica, sans-serif;
-    background-color: #f7f5f0;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f5f0;
+  margin: 0;
+  padding: 0;
 }
 
 #nav {
-    width: 100vw;
-    background: black;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    bottom: -15px;
-    height: 45px;
-    padding: 3px;
-    box-sizing: border-box;
-    display: block;
-    z-index: 1;
+  width: 100vw;
+  background: black;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  bottom: -15px;
+  height: 45px;
+  padding: 3px;
+  box-sizing: border-box;
+  display: block;
+  z-index: 1;
 }
 
 .navBar {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    font-weight: 600;
-    margin: 0 auto;
-    align-items: center;
-    padding: 0 20px;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-weight: 600;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
 }
 
 .navBar li {
-    padding: 10px;
+  padding: 10px;
 }
 .menu {
-    color: seashell;
-    font-size: 16px;
+  color: seashell;
+  font-size: 16px;
 }
 
 .menu > ul {
@@ -45,103 +45,103 @@ body{
 }
 
 .subMenu {
-    padding: 8px;
-    display: none;
+  padding: 8px;
+  display: none;
 }
 
 .menu:hover > ul {
-    display: block;
-    list-style: none;
-    background-color: black;
-    z-index: 20;
-    font-size: 16px;
-    position: absolute;
-    top: 38px;
-    right: -3px;
-    text-align: center;
+  display: block;
+  list-style: none;
+  background-color: black;
+  z-index: 20;
+  font-size: 16px;
+  position: absolute;
+  top: 38px;
+  right: -3px;
+  text-align: center;
 }
 
 .menu:hover > ul > .subMenu {
-    display: block;
+  display: block;
 }
 
-#profileName { 
-    display: block;
-    color : seashell;
+#profileName {
+  display: block;
+  color: seashell;
 }
 
 #profileName:hover {
-    color: tomato;
+  color: tomato;
 }
 
 .navBar a {
-    color: seashell;
-    text-decoration: none;
-    transition: all 0.5s;
+  color: seashell;
+  text-decoration: none;
+  transition: all 0.5s;
 }
 
- .navBar a:hover {
-    color: gray;
+.navBar a:hover {
+  color: gray;
 }
 
 header {
-    text-align: center;
-    background: url('../images/code-background1.jpg') no-repeat top center;
-    background-size: cover;
-    overflow: hidden;
-    padding-top: 60px;
-    line-height: 1.5;
-    width: 100vw;
-    height: 90vh;
+  text-align: center;
+  background: url("../images/code-background1.jpg") no-repeat top center;
+  background-size: cover;
+  overflow-x: hidden;
+  padding-top: 60px;
+  line-height: 1.5;
+  width: calc (100vh - 14%);
+  height: 90vh;
 }
 
 .profile-img {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: 3px solid black;
-    transition: all .125s;
-    position: center;
-    margin-top: 200px;
-    object-fit: cover;
-    object-position: 10% 20%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid black;
+  transition: all 0.125s;
+  position: center;
+  margin-top: 200px;
+  object-fit: cover;
+  object-position: 10% 20%;
 }
 
 .profile-img:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 h1 {
-    text-align: center;
-    color: seashell;
-    background-color: black;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 0 70px;
-    font-size: 25px;
+  text-align: center;
+  color: seashell;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 70px;
+  font-size: 25px;
 }
 
 h2 {
-    font-size: 25px;
-    padding: 20px;
-    margin: 0;
+  font-size: 25px;
+  padding: 20px;
+  margin: 0;
 }
 
 p {
-    font-size: 15px;
-    text-align: match-parent;
-    line-height: 26px;
-    margin: 0;
+  font-size: 15px;
+  text-align: match-parent;
+  line-height: 26px;
+  margin: 0;
 }
 
 #about,
 #skills,
 #Projects {
-    height: 100vh;
+  min-height: 100vh;
 }
 
 #experience {
-    height: 110vh;
+  height: 110vh;
 }
 
 #about,
@@ -149,543 +149,518 @@ p {
 #skills,
 #projects,
 #messages,
-#connect,
-#endDiv
-    {
-       padding: 23px;
+#connect {
+  padding: 23px;
 }
 
-main > section:nth-child(odd),
-#endDiv{
-    background-color: rgb(231, 231, 231);
+main > section:nth-child(odd) {
+  background-color: rgb(231, 231, 231);
 }
 
 h3 {
-    font-size: 16px;
-    color: gray;
-    margin-bottom: 0;      
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 0;
 }
 
-h4{
-    color: grey;
-    flex: 0 1 80%;
-    font-size: 12px;
-    margin: 0; 
+h4 {
+  color: grey;
+  flex: 0 1 80%;
+  font-size: 12px;
+  margin: 0;
 }
 
 .subDiv i {
-    font-size: 24px;
-    margin-left: 8px;  
+  font-size: 24px;
+  margin-left: 8px;
 }
 
 .collapseDiv {
-    display: flex;
-    flex-direction: column;
-    max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
 }
 
 .subDiv {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-bottom: 2px solid gray;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid gray;
 }
 
 .content {
-    padding-top: 10px;
-    max-height: 0;
-    overflow: hidden;
-    max-width: 800px;
+  padding-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  max-width: 800px;
 }
 
 i:hover + .content {
-    max-height: 300px;
-    transition: max-height 2s ease-in 0.2s;
-    cursor: pointer;
+  max-height: 300px;
+  transition: max-height 2s ease-in 0.2s;
+  cursor: pointer;
+}
+
+#skillsDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gray;
+  padding: 10px;
 }
 
 #technicalSkills,
 #businessSkills,
 #personalSkills {
-    list-style-type: none;
-    font-size: 15px;
+  list-style-type: none;
+  font-size: 15px;
 }
 
 #projects ul {
-    padding: 0;
+  padding: 0;
+}
+
+.pin::before {
+  display: none;
 }
 
 .repoList {
-    list-style-type: none;
-    background-color: #eae672;
-    color: #333;
-    font-family: Satisfy;
-    font-size: 30px;
-    padding: 10px;
-    margin: 10px auto;
-    border-radius: 10;
-    max-width: 251px;
-    box-shadow: -12px 10px 10px 2px rgba(0,0,0,0.3);
+  list-style-type: none;
+  background-color: #eae672;
+  color: #333;
+  font-family: Satisfy;
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 10;
+  max-width: 251px;
+  box-shadow: -12px 10px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-.repoList:nth-child(even){
-    transform: rotate(-2deg);
-    text-align: right;
-    box-shadow: 12px 10px 10px 2px rgba(0,0,0,0.3);
+.repoList:nth-child(even) {
+  transform: rotate(-2deg);
+  text-align: right;
+  box-shadow: 12px 10px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-.repoList:nth-child(odd){
-    transform: rotate(2deg);
+.repoList:nth-child(odd) {
+  transform: rotate(2deg);
 }
 
 .projectLink {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 #connect ul {
-    padding: 4px;
+  padding: 4px;
 }
 
 .connectList {
-    display: inline-block;
-    list-style-type: none;
-    border-radius: 6px;
-    font-size: 20px;
-    padding: 5px 10px;
-    background-color: black;
-    margin-left: 12px;
+  display: inline-block;
+  list-style-type: none;
+  border-radius: 6px;
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: black;
+  margin-left: 12px;
 }
 
 .connectList:nth-child(even) {
-    background-color: #0499ff;
+  background-color: #0499ff;
 }
 
 .fa.icon {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .link {
-    color: white;
+  color: white;
 }
 
 #form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .inlineInput {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .userInputLabel {
-    text-align: left;
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 11px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 11px;
 }
 
 .userInput {
-    width: 80%; 
-    height: 30px;
-    font-size: 17px;
+  width: 80%;
+  height: 30px;
+  font-size: 17px;
 }
 
-.userInput:focus  {
-    background-color: lightgray;
+.userInput:focus {
+  background-color: lightgray;
 }
 
 #userMessageLabel {
-    text-align: left;
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 11px;
-    display: block;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 11px;
+  display: block;
 }
 
 #userMessageInput:focus {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 #userMessageInput {
-    width: 80%;
-    height: 50px;
-    font-size: 17px;
+  width: 80%;
+  height: 50px;
+  font-size: 17px;
 }
 
 button {
-    cursor: pointer;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    padding: 5px;
-    font-weight: bold;
-    font-size: 17px;
-    color: lightgray;
-    width: 80px;
-    align-self: center;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  color: lightgray;
+  width: 80px;
+  align-self: center;
 }
 
 .buttons {
-    background-color: GRAY;
+  background-color: GRAY;
 }
 
 .newMessageList {
-    border-bottom: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 .newMessageList a {
-    font-weight: bold;
-}
-
-#endDiv {
-    padding: 23px;
+  font-weight: bold;
 }
 
 #endDiv h2 {
-    text-align: center;
+  text-align: center;
 }
 
-video{
-    width: 85vw;
-    max-width: 780px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#footerP {
-    font-size: 17px;
+video {
+  width: 85vw;
+  max-width: 780px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer > ul {
-    padding-left: 5px;
+  margin: 0;
 }
 
 .footerList {
-    display: inline;
-    list-style: none;
-    background-color: black;
-    font-size: 25px;
+  display: inline;
+  list-style: none;
+  font-size: 30px;
 }
 footer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: baseline;
-    text-align: left;
-    padding: 0 10px;
-    color: slategray;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 10px;
+  color: slategray;
 }
-        /* <For IPad and Tablet view>  */
-@media (min-width: 700px) {
-    #nav { 
-        height: 70px;
-    }
-    
-    .navBar {
-        font-size: 22px;
-        height: 68px;
-    }
+/* <For IPad and Tablet view>  */
+@media (min-width: 766px) {
+  #nav {
+    height: 70px;
+  }
 
-    .menu {
-        font-size: 27px;
-    }
+  .navBar {
+    font-size: 22px;
+    height: 68px;
+  }
 
-    .menu:hover > ul {
-        top: 60px;
-        font-size: 20px;
-    }
+  .menu {
+    font-size: 27px;
+  }
 
-    header {
-        height: 80vh;
-    }
+  .menu:hover > ul {
+    top: 60px;
+    font-size: 20px;
+  }
 
-    .profile-img {
-        margin-top: 228px;
-        height: 250px;
-        width: 250px;
-    }
+  header {
+    height: 80vh;
+  }
 
-    h1 {
-        margin: 0 221px;
-    }
+  .profile-img {
+    margin-top: 228px;
+    height: 250px;
+    width: 250px;
+  }
 
-    h2 {
-        font-size: 27px;
-        margin-top: 50px;
-    }
+  h1 {
+    margin: 0 221px;
+  }
 
-    p {
-        font-size: 20px;
-        line-height: 35px;
-        padding: inherit;
-    }
+  h2 {
+    font-size: 27px;
+    margin-top: 50px;
+  }
 
-    h3 {
-        font-size: 23px;
-    }
+  p {
+    font-size: 20px;
+    line-height: 35px;
+    padding: inherit;
+  }
 
-    h4 {
-        font-size: 18px;
-    }
+  h3 {
+    font-size: 23px;
+  }
 
-    .collapseDiv{
-        padding: 20px;
-    }
+  h4 {
+    font-size: 18px;
+  }
 
-    #technicalSkills, 
-    #businessSkills, 
-    #personalSkills {
-        font-size: 20px;
-    }
+  .collapseDiv {
+    padding: 20px;
+  }
 
-    .projectLink {
-        font-size: 26px;
-        font-weight: bold;
-    }
+  #technicalSkills,
+  #businessSkills,
+  #personalSkills {
+    font-size: 20px;
+  }
 
-    #projects ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto-fit;
-        grid-gap: 40px 10px; 
-    }
-    
-    .repoList {
-        width: 250px;
-        height: 160px;
-        margin: 0 auto;
-        padding: 10px;
-        transform: rotate(2deg)
-    }
+  .projectLink {
+    font-size: 26px;
+    font-weight: bold;
+  }
 
-    .pin {
-        background-color: #aaa;
-        display: block;
-        height: 32px;
-        width: 2px;
-        position: absolute;
-        left: 50%;
-        top: -16px;
-        z-index: 1;
-    }
+  #projects ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto-fit;
+    grid-gap: 40px 10px;
+  }
 
-    .pin::before {
-        background-color: #A31;
-        background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
-        border-radius: 50%;
-        box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
-                    inset 3px 3px 3px hsla(0,0%,100%,.2),
-                    inset -3px -3px 3px hsla(0,0%,0%,.2),
-                    23px 20px 3px hsla(0,0%,0%,.15);
-        content: '';
-        height: 12px;
-        left: -5px;
-        position: absolute;
-        top: -10px;
-        width: 12px;
-    }
+  .repoList {
+    width: 250px;
+    height: 160px;
+    margin: 0 auto;
+    padding: 10px;
+    transform: rotate(2deg);
+  }
 
-    .fa.icon {
-        font-size: 40px;
-    }
+  .pin::before {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    z-index: 1;
+    color: rgb(230, 73, 73);
+  }
 
-    footer {
-        height: 18vh;
-    }
+  .fa.icon {
+    font-size: 40px;
+  }
+
+  .fLink {
+    color: black;
+  }
 }
 
+/* < For Desktop > */
 @media (min-width: 1300px) {
+  html {
+    font-size: 45px;
+  }
 
-    html {
-        font-size: 45px;
-    }
+  #nav {
+    bottom: 0;
+    height: auto;
+    width: 15%;
+  }
 
-    #nav {
-        bottom: 0;
-        height: auto;
-        width: 15%;
-    }
-    
-    .navBar {
-        display: inline-block;
-    }
+  .navBar {
+    display: inline-block;
+  }
 
-    #profileName {
-        margin-top: 100px;
-    }
+  #profileName {
+    margin-top: 100px;
+  }
 
-    .menu i {
-        display: none;
-    }
+  .menu i {
+    display: none;
+  }
 
-    .menu > ul {
-        display: block;
-        padding-left: 5px;
-    }
+  .menu > ul {
+    display: block;
+    padding-left: 5px;
+  }
 
-    .subMenu {
-        display: block;
-    }
-    
-    .navBar li {
-        padding: 20px;
-        font-size: 20px;
-        text-align: center;
-    }
+  .subMenu {
+    display: block;
+  }
 
-    .menu:hover > ul {
-        position: inherit;
-    }
+  .navBar li {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
 
-    .menu:hover > ul > .subMenu {
-        position: inherit; 
-    }
+  .menu:hover > ul {
+    position: inherit;
+  }
 
-    .site-main {
-        margin-left: 15%;
-        display: block;
-        overflow-x: hidden;
-    }
+  .menu:hover > ul > .subMenu {
+    position: inherit;
+  }
 
-    header {
-        height: 92vh;
-    }
+  main {
+    display: block;
+    overflow-x: hidden;
+    margin-left: 15%;
+  }
 
-    .profile-img,
-    h1 {
-        position:relative;
-        left: 5%;
-    }
+  header {
+    height: 94vh;
+  }
 
-    .profile-img {
-        height: 300px;
-        width: 300px;
-        margin-top: 200px;
-        z-index: 1;
-    }
+  .profile-img,
+  h1 {
+    position: relative;
+  }
 
-    h1 {
-        border: 2px solid gray;
-        font-size: 30px;
-        margin-left: 38%;
-        margin-right: 38%;
-    }
+  .profile-img {
+    height: 300px;
+    width: 300px;
+    margin-top: 200px;
+    z-index: 1;
+  }
 
-    main {
-        margin-left: 15%
-    }
+  h1 {
+    border: 2px solid gray;
+    font-size: 30px;
+    margin-left: 38%;
+    margin-right: 38%;
+  }
 
-    #about,
-    #experience,
-    #skills,
-    #projects,
-    #connect,
-    #messages,
-    #endDiv {
-        padding-left: 80px;
-    }
+  main footer {
+    margin-left: 15%;
+  }
 
-    #about p {
-        max-width: 800px;
-    }
+  #about p {
+    max-width: 800px;
+  }
 
-    #skills,
-    #projects {
-        height: 90vh;
-    }
+  #skills,
+  #projects {
+    height: 90vh;
+  }
 
-    .projectLink {
-        font-size: 26px;
-        font-weight: bold;
-    }
+  .projectLink {
+    font-size: 26px;
+    font-weight: bold;
+  }
 
-    .fa.icon {
-        font-size: 40px;
-    }
+  .fa.icon {
+    font-size: 40px;
+  }
 
-    #connect ul {
-        padding: inherit;
-    }
+  #connect ul {
+    padding: inherit;
+  }
 
-    .link {
-        font-size: 23px;
-    }
+  .link {
+    font-size: 23px;
+  }
 
-    #form{
-        box-sizing: border-box;
-    }
+  #form {
+    box-sizing: border-box;
+  }
 
-    .inlineInput {
-        display: inline-flex;
-        width: 47%;
-        flex-direction: column;
-    }
+  .inlineInput {
+    display: inline-flex;
+    width: 47%;
+    flex-direction: column;
+  }
 
-    .userInputLabel {
-        margin-top: 0;
-    }
+  .userInputLabel {
+    margin-top: 0;
+  }
 
-    .userInput {
-        height: 40px;
-    }
+  .userInput {
+    height: 40px;
+  }
 
-    #userMessageInput {
-        height: 76px;
-        width: 86%;
-    }
+  #userMessageInput {
+    height: 76px;
+    width: 86%;
+  }
 
-    .buttons {
-        width: 15%;
-    }
+  .buttons {
+    width: 15%;
+  }
 
-    .newMessageList {
-        font-size: 21px;
-    }
+  .newMessageList {
+    font-size: 21px;
+  }
 
-    #endDiv,
-    footer {
-        margin-left: 15%;
-    }
-
-    footer {
-        height: 5vh;
-    }
+  footer {
+    height: revert;
+  }
 }
 
 @media print {
-    body  {
-        margin: 20px 0;
-        padding-top: 0;
-        scale: 93;
-    }
+  body {
+    margin: 20px 0;
+    padding-top: 0;
+  }
 
-    #nav {
-        display: none;
-    }
+  #nav {
+    display: none;
+  }
 
-    main > section {
-        size: 8.5in 11in;
-        
-    }
+  main {
+    size: 8.5in 11in;
+  }
 
-    .subDiv {
-        display: block
-    }
+  main > section {
+    height: auto;
+  }
 
-    .content{
-        overflow: visible;
-        max-height: 600px;
-    }
+  #projects {
+    scale: 72;
+  }
 
-    .subDiv > i {
-        display: none;
-    }
+  .subDiv {
+    display: block;
+  }
 
-    #endDiv{
-        display: none;
-    }
+  .content {
+    overflow: visible;
+    max-height: 600px;
+  }
+
+  .subDiv > i {
+    display: none;
+  }
+
+  #endDiv {
+    display: none;
+  }
 }

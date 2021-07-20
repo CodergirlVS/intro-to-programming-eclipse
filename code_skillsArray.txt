@@ -1,0 +1,20 @@
+To create skills list independently in an Array:
+
+
+for (let i = 0; i < techSkills.length; i++) {
+  const techSkill = document.createElement("li");
+  techSkill.innerText = techSkills[i];
+  techSkillsList.appendChild(techSkill);
+}
+
+for (let i = 0; i < busnSkills.length; i++) {
+  const busnSkill = document.createElement("li");
+  busnSkill.innerHTML = busnSkills[i];
+  busnSkillsList.appendChild(busnSkill);
+}
+
+for (let i = 0; i < personalSkills.length; i++) {
+  const personalSkill = document.createElement("li");
+  personalSkill.textContent = personalSkills[i];
+  personalSkillsList.appendChild(personalSkill);
+}
