@@ -559,7 +559,8 @@ footer {
     margin-right: 38%;
   }
 
-  main footer {
+  main,
+  footer {
     margin-left: 15%;
   }
 
@@ -618,11 +619,6 @@ footer {
 
   .newMessageList {
     font-size: 21px;
-  }
-
-  footer {
-    height: revert;
-    margin-left: 15%;
   }
 }
 
