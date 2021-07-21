@@ -137,7 +137,7 @@ p {
 #about,
 #skills,
 #Projects {
-  min-height: 100vh;
+  min-height: 94vh;
 }
 
 #experience {
@@ -622,6 +622,7 @@ footer {
 
   footer {
     height: revert;
+    margin-left: 15%;
   }
 }
 
