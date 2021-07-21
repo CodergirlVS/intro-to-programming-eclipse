@@ -620,14 +620,6 @@ footer {
   .newMessageList {
     font-size: 21px;
   }
-<<<<<<< HEAD
-=======
-
-  footer {
-    height: revert;
-    margin-left: 15%;
-  }
->>>>>>> main
 }
 
 @media print {
