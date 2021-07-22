@@ -100,7 +100,7 @@ header {
   width: 200px;
   border-radius: 50%;
   border: 3px solid black;
-  transition: all 0.125s;
+  transition: all 0.125s easy-in-out;
   position: center;
   margin-top: 200px;
   object-fit: cover;
