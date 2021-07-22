@@ -1,12 +1,3 @@
-//**************************Lesson-4-2****************************************
-
-const today = new Date();
-const thisYear = today.getFullYear();
-const footer = document.querySelector("footer");
-const copyright = document.getElementById("footerP");
-copyright.innerHTML = `&copy; Vaidehi ${thisYear}`;
-
-// const profileName = document.getElementById("profileName");
 
 const skillsArray = [
   {
@@ -109,11 +100,50 @@ skillsSection.addEventListener("mouseover", (event) => {
 skillsSection.addEventListener("mouseout", (event) => {
   if (event.target.tagName == "LI") {
     const index = event.target.getAttribute("data-id");
-    console.log(index);
     event.target.textContent = skillsArray[index].name;
     event.target.style.color = "black";
   }
 });
+
+//*************************************Lessaon-6-2**************************************************
+
+fetch("https://api.github.com/users/CodergirlVS/repos")
+  .then(checkStatus)
+  .then((response) => response.json())
+  .then((data) => onload(data))
+  .catch((error) => {
+  document.querySelectorAll('main')[0].innerHTML = `<h1> Ooops! ${error} </h1>`;
+  console.log('OOh' + error);
+  });
+
+function checkStatus(response) {
+  if (response.ok) {
+    return Promise.resolve(response);
+  } else {
+    return Promise.reject(new Error(response.statusText));
+  }
+}
+
+function onload(data) {
+  const projectSection = document.getElementById("projects");
+  const projectList = projectSection.querySelector("ul");
+  for (i = 0; i < data.length; i++) {
+    const project = document.createElement("li");
+    project.className = "repoList";
+    const atag = document.createElement("a");
+    atag.className = "projectLink";
+    atag.setAttribute("target", "_blank");
+    atag.href = data[i].html_url;
+    atag.innerText = data[i].name;
+    const ptag = document.createElement("p");
+    ptag.innerText =
+      data[i].created_at.slice(0, 10) + "\n" + data[i].description;
+    const itag = document.createElement("i");
+    itag.className = "fa fa-thumb-tack pin";
+    projectList.appendChild(project);
+    project.append(atag, ptag, itag);
+  }
+}
 
 //*****************************************************************Leasson-4-3****************************************************
 //                        ************* CODE REMOVES THE EDIT BUTTON AND CREATES A SAVE BUTTON **********************
@@ -265,41 +295,10 @@ messageForm.addEventListener("submit", (e) => {
   messageForm.reset();
 });
 
-//*************************************Lessaon-6-2**************************************************
+//**************************Lesson-4-2****************************************
 
-fetch("https://api.github.com/users/CodergirlVS/repos")
-  .then(checkStatus)
-  .then((response) => response.json())
-  .then((data) => onload(data))
-  .catch((error) => {
-    console.log("Ooops!" + " " + error);
-  });
-
-function checkStatus(response) {
-  if (response.ok) {
-    return Promise.resolve(response);
-  } else {
-    return Promise.reject(new Error(response.statusText));
-  }
-}
-
-function onload(data) {
-  const projectSection = document.getElementById("projects");
-  const projectList = projectSection.querySelector("ul");
-  for (i = 0; i < data.length; i++) {
-    const project = document.createElement("li");
-    project.className = "repoList";
-    const atag = document.createElement("a");
-    atag.className = "projectLink";
-    atag.setAttribute("target", "_blank");
-    atag.href = data[i].html_url;
-    atag.innerText = data[i].name;
-    const ptag = document.createElement("p");
-    ptag.innerText =
-      data[i].created_at.slice(0, 10) + "\n" + data[i].description;
-    const itag = document.createElement("i");
-    itag.className = "fa fa-thumb-tack pin";
-    projectList.appendChild(project);
-    project.append(atag, ptag, itag);
-  }
-}
+const today = new Date();
+const thisYear = today.getFullYear();
+const footer = document.querySelector("footer");
+const copyright = document.getElementById("footerP");
+copyright.innerHTML = `&copy; Vaidehi ${thisYear}`;
