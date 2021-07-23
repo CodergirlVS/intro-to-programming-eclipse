@@ -1,3 +1,17 @@
+// Image Gallery Scroll...
+
+let gLi = document.getElementsByClassName("gImages");
+let index = 0;
+window.show = function (increase) {
+  index = index + increase;
+
+  index = Math.min(Math.max(index, 0), gLi.length - 1);
+  gLi[index].scrollIntoView({
+    behavior: "smooth",
+    block: "nearest",
+    inline: "start",
+  });
+};
 
 const skillsArray = [
   {
@@ -112,8 +126,10 @@ fetch("https://api.github.com/users/CodergirlVS/repos")
   .then((response) => response.json())
   .then((data) => onload(data))
   .catch((error) => {
-  document.querySelectorAll('main')[0].innerHTML = `<h1> Ooops! ${error} </h1>`;
-  console.log('OOh' + error);
+    document.querySelectorAll(
+      "main"
+    )[0].innerHTML = `<h1> Ooops! ${error} </h1>`;
+    console.log("OOh" + error);
   });
 
 function checkStatus(response) {

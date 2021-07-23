@@ -132,6 +132,10 @@ p {
   margin: 0;
 }
 
+#gallery {
+  display: none;
+}
+
 #about,
 #skills,
 #Projects {
@@ -425,6 +429,37 @@ footer {
     padding: inherit;
   }
 
+  #galleryDiv {
+    display: flex;
+    justify-content: center;
+  }
+
+  #gallery {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 510px;
+    height: auto;
+  }
+
+  .gImages {
+    display: block;
+    list-style: none;
+  }
+
+  .gbutton {
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+    border-radius: 50%;
+    margin: 10px;
+    width: 44px;
+    height: 44px;
+  }
+
   h3 {
     font-size: 23px;
   }
@@ -557,7 +592,7 @@ footer {
     margin-right: 38%;
   }
 
-  main, 
+  main,
   footer {
     margin-left: 17%;
   }
