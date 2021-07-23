@@ -132,7 +132,8 @@ p {
   margin: 0;
 }
 
-#gallery {
+#imgPara,
+#galleryDiv {
   display: none;
 }
 
@@ -427,6 +428,10 @@ footer {
     font-size: 20px;
     line-height: 35px;
     padding: inherit;
+  }
+
+  #imgPara {
+    display: block;
   }
 
   #galleryDiv {
