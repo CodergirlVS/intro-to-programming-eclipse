@@ -13,6 +13,8 @@ window.show = function (increase) {
   });
 };
 
+// Skills Section- Array**
+
 const skillsArray = [
   {
     name: "JavaScript",
@@ -126,17 +128,17 @@ fetch("https://api.github.com/users/CodergirlVS/repos")
   .then((response) => response.json())
   .then((data) => onload(data))
   .catch((error) => {
-    document.querySelectorAll(
-      "main"
-    )[0].innerHTML = `<h1> Ooops! ${error} </h1>`;
-    console.log("OOh" + error);
+    document.querySelector(
+      "#projects",
+      "ul"
+    ).innerHTML = `<h1> Ooops! ${error} </h1>`;
   });
 
 function checkStatus(response) {
   if (response.ok) {
     return Promise.resolve(response);
   } else {
-    return Promise.reject(new Error(response.statusText));
+    return Promise.reject(new Error(response.status));
   }
 }
 
