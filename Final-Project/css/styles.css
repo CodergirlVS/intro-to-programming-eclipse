@@ -625,7 +625,7 @@ footer {
 
   #skills,
   #projects {
-    height: 90vh;
+    min-height: 90vh;
   }
 
   .projectLink {
@@ -692,7 +692,7 @@ footer {
   }
 
   main > section {
-    height: auto;
+    min-height: auto;
   }
 
   #projects {
